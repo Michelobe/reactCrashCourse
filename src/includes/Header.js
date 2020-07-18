@@ -4,8 +4,10 @@ export default class Header extends Component {
 	constructor() {
 		super();
 		this.state = {
+            //categoriesData
 		};
-	}
+    }
+    
 
 	render() {
 		return (

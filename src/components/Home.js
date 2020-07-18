@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 export default class Home extends Component {
 	constructor() {
 		super();
@@ -7,27 +8,50 @@ export default class Home extends Component {
 		};
     }
 
-    loopCategories() {
-        let testCategory = [1,2,3,4,5,6,7,8,9];
 
-        return testCategory.map(() => {
-            return(
-                <div className={'categories'}>
+    
+    componentWillMount() {
+        this.setState({
+            categoriesData: this.props.categoriesData
+        }
+        // , () => {
+        //     console.log(this.state.categoriesData);
+        // }
+        );
+    }
+
+    loopTitle = () => {
+        const categoryData = this.state.categoriesData;
+        console.log(categoryData);
+
+        return this.state.categoriesData.map((item, i) => {
+            const loopListings = () => {
+                return item.listings.map((listing, i) => {
+                    return(
+                        <div key = {i}>
+                            {listing.name}
+                        </div>
+                    );
+                });
+            }
+
+            return (
+                <div key = {i} className={'categories'}>
                     <a
                         href={`#`}
                         className={'title'}
                     >
-                        For Sale
+                        {item.title}
                     </a>
                     <div
-                        className={`groupLinks`}
-                    >
-                        Cars and Trucks
+                            className={`groupLinks ${item.title == 'jobs' || item.title == 'housing' ? 'singleCol' : ''}`}
+                            key = {i}
+                        >
+                        {loopListings()}
                     </div>
                 </div>
             );
-        }
-        );
+        });
     }
     
 	loopTags = () => {
@@ -40,7 +64,7 @@ export default class Home extends Component {
 				</div>
 			);
 		});
-	};
+	}
 
 	render() {
 		return (
@@ -52,7 +76,8 @@ export default class Home extends Component {
 					</h1>
 
 					<section className={'links'}>
-                        {this.loopCategories()}
+                        {this.loopTitle()}
+                        {/* for sale */}
                     </section>
 
 					<section className={'trending'}>
