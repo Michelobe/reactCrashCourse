@@ -15,10 +15,10 @@ export default class Details extends Component {
 						{/* =======================SUBMENU=========================== */}
 						<section className={'subMenu'}>
 							<div className={'direction'}>
-								<div className = {'link'} className={'next'}>
+								<div className={'next'}>
 									Next
 								</div>
-								<div className = {'link'} className={'prev'}>
+								<div className={'prev'}>
 									Prev
 								</div>
 							</div>

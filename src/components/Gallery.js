@@ -48,7 +48,7 @@ export default class Gallery extends Component {
 	nextBtn = () => {
 		if (this.state.currentIndex === this.state.allImages.length - 1) {
 			this.setState({
-				currentIndex: (this.state.currentIndex = 0)
+				currentIndex: 0
 			});
 		} else {
 			this.setState({
