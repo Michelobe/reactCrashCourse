@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
  @import "reset";
  @import "home.css";
- @import "listings";
- @import "details";
+ @import "listings.css";
+ @import "itemDetails.css";
  * {
 	 box-sizing: border-box;
 }

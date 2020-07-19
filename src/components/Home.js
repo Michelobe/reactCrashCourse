@@ -1,34 +1,34 @@
 import React, { Component } from 'react';
+import {
+    Link
+} from "react-router-dom";
 
 
 export default class Home extends Component {
 	constructor() {
 		super();
 		this.state = {
+            //categoriesData set by componentWillMount
+            currentIndex: 0
 		};
     }
 
 
     
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this.setState({
             categoriesData: this.props.categoriesData
-        }
-        // , () => {
-        //     console.log(this.state.categoriesData);
-        // }
-        );
+        });
     }
 
+
     loopTitle = () => {
-        const categoryData = this.state.categoriesData;
-        console.log(categoryData);
 
         return this.state.categoriesData.map((item, i) => {
             const loopListings = () => {
                 return item.listings.map((listing, i) => {
                     return(
-                        <div key = {i}>
+                        <div  key = {i}>
                             {listing.name}
                         </div>
                     );
@@ -37,14 +37,13 @@ export default class Home extends Component {
 
             return (
                 <div key = {i} className={'categories'}>
-                    <a
-                        href={`#`}
-                        className={'title'}
+                    <Link to ={`/for-sale`}
+                          className={'title'}
                     >
                         {item.title}
-                    </a>
+                    </Link>
                     <div
-                            className={`groupLinks ${item.title == 'jobs' || item.title == 'housing' ? 'singleCol' : ''}`}
+                            className={`groupLinks ${item.title === 'jobs' || item.title === 'housing' ? 'singleCol' : ''}`}
                             key = {i}
                         >
                         {loopListings()}

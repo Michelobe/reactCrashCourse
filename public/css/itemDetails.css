@@ -1,0 +1,132 @@
+.detailsPage {
+    background: #f5f5f5;
+    padding: 20px 0;
+}
+.detailsPage .whiteBox {
+    background: white;
+}
+.detailsPage .whiteBox .subMenu {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* =============CHANGE MADE================================ */
+.detailsPage .whiteBox .subMenu div {
+/* =============CHANGE MADE================================ */
+    padding: 10px 20px;
+    color: #2a7ddd;
+    cursor: pointer;
+    border-right: 1px solid #808080 41;
+    text-decoration: none;
+}
+.detailsPage .whiteBox .subMenu a:last-child {
+    border: none;
+}
+.detailsPage .whiteBox .subMenu .direction{
+    display: flex;
+    flex-flow: row;
+    /* =============CHANGE MADE================================ */
+    color: blue;
+    /* =============CHANGE MADE================================ */
+}
+.detailsPage .whiteBox .subMenu .subLinks{
+    display: flex;
+    flex-flow: row;
+    /* =============CHANGE MADE================================ */
+    color: blue;
+    /* =============CHANGE MADE================================ */
+}
+.detailsPage .whiteBox .subMenu .subLinks > a:nth-last-child(2) {
+    border: none;
+}
+.detailsPage .whiteBox .contentArea {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.detailsPage .whiteBox .contentArea .mediaColumn .gallery .slider .mainImage {
+    position: relative;
+}
+.detailsPage .whiteBox .contentArea .mediaColumn .gallery .slider .mainImage .arrows {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 0 8px;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, .6);
+    cursor: pointer;
+}
+.detailsPage .whiteBox .contentArea .mediaColumn .gallery .slider .mainImage .arrows.leftArrow {
+    left: 0;
+}
+.detailsPage .whiteBox .contentArea .mediaColumn .gallery .slider .mainImage .arrows.rightArrow {
+    right: 0;
+}
+.detailsPage .whiteBox .contentArea .mediaColumn .gallery .slider .mainImage .imageOne {
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+}
+.detailsPage .whiteBox .contentArea .mediaColumn .gallery .thumbnails {
+    padding: 5px 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-around;
+    grid-gap: 8px;
+}
+.detailsPage .whiteBox .contentArea .mediaColumn .gallery .thumbnails .thumbImage {
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    cursor: pointer;
+}
+.detailsPage .whiteBox .contentArea .detailsColumn {
+    padding-right: 20px;
+}
+.detailsPage .whiteBox .contentArea .detailsColumn .date {
+    font-size: 0.9rem;
+    color: #242424;
+    margin: 0 0 10px 0;
+}
+.detailsPage .whiteBox .contentArea .detailsColumn .title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+.detailsPage .whiteBox .contentArea .detailsColumn .price {
+    color: green;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+.detailsPage .whiteBox .contentArea .detailsColumn label {
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin: 0 0 8px 0;
+    display: block;
+}
+.detailsPage .whiteBox .contentArea .detailsColumn .moreDetails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid #808080 41;
+}
+.detailsPage .whiteBox .contentArea .detailsColumn .moreDetails .info h5 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    text-transform: capitalize;
+}
+.detailsPage .whiteBox .contentArea .detailsColumn .description p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #242424;
+    margin: 0 0 1rem 0;
+}
