@@ -65,21 +65,21 @@ export default class Listings extends Component {
                 );
             }
 // =============ELSE STATEMENT ONLY CREATED TO RID WARNING IN BROWSER===========WARNING=========
-            // else{
-            //     return(
-            //         <div key={i} className={'item'} onClick = {this.keyItem}>
-            //             <div className={'image'}
-            //                  style = {{'backgroundImage': `url(${item.images[0]})`}}>
-            //                 <div className={'price'}>${item.price}</div>
-            //             </div>
-            //             <div className={'details'}>
-            //                 <h5>{item.title}</h5>
-            //                 <i className="fas fa-star"></i>
-            //                 <h6>{item.city}</h6>
-            //             </div>
-            //         </div>
-            //     )
-            // }  
+            else{
+                return(
+                    <Link to={`/for-sale/item-details`} key={i} className={'item'} onClick = {this.keyItem}>
+                        <div className={'image'}
+                             style = {{'backgroundImage': `url(${item.images[0]})`}}>
+                            <div className={'price'}>${item.price}</div>
+                        </div>
+                        <div className={'details'}>
+                            <h5>{item.title}</h5>
+                            <i className="fas fa-star"></i>
+                            <h6>{item.city}</h6>
+                        </div>
+                    </Link>
+                )
+            }  
 // =============ELSE STATEMENT ONLY CREATED TO RID WARNING IN BROWSER==========WARNING==========
 		});
 	};
