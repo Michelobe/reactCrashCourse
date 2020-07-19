@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {
+    Link
+} from "react-router-dom";
 
 export default class Listings extends Component {
 	constructor() {
@@ -48,7 +51,7 @@ export default class Listings extends Component {
 		return this.state.listingsData.map((item, i) => {
             if(item.price >= this.state.minPrice && item.price <= this.state.maxPrice){
                 return (
-                    <div key={i} className={'item'} onClick = {this.keyItem}>
+                    <Link to={`/for-sale/item-details`} key={i} className={'item'} onClick = {this.keyItem}>
                         <div className={'image'}
                              style = {{'backgroundImage': `url(${item.images[0]})`}}>
                             <div className={'price'}>${item.price}</div>
@@ -58,25 +61,25 @@ export default class Listings extends Component {
                             <i className="fas fa-star"></i>
                             <h6>{item.city}</h6>
                         </div>
-                    </div>
+                    </Link>
                 );
             }
 // =============ELSE STATEMENT ONLY CREATED TO RID WARNING IN BROWSER===========WARNING=========
-            else{
-                return(
-                    <div key={i} className={'item'} onClick = {this.keyItem}>
-                        <div className={'image'}
-                             style = {{'backgroundImage': `url(${item.images[0]})`}}>
-                            <div className={'price'}>${item.price}</div>
-                        </div>
-                        <div className={'details'}>
-                            <h5>{item.title}</h5>
-                            <i className="fas fa-star"></i>
-                            <h6>{item.city}</h6>
-                        </div>
-                    </div>
-                )
-            }  
+            // else{
+            //     return(
+            //         <div key={i} className={'item'} onClick = {this.keyItem}>
+            //             <div className={'image'}
+            //                  style = {{'backgroundImage': `url(${item.images[0]})`}}>
+            //                 <div className={'price'}>${item.price}</div>
+            //             </div>
+            //             <div className={'details'}>
+            //                 <h5>{item.title}</h5>
+            //                 <i className="fas fa-star"></i>
+            //                 <h6>{item.city}</h6>
+            //             </div>
+            //         </div>
+            //     )
+            // }  
 // =============ELSE STATEMENT ONLY CREATED TO RID WARNING IN BROWSER==========WARNING==========
 		});
 	};

@@ -40,7 +40,7 @@ class App extends Component {
                         <Route exact path = '/:for-sale'>
                             <Listings listingsData = {this.state.listingsData} />
                         </Route>
-                        <Route exact path = '/:for-sale/:cars-and-trucks/:item-details'>
+                        <Route exact path = '/:for-sale/:item-details'>
                             <Details />
                         </Route>
                 </div>

@@ -28,9 +28,9 @@ export default class Home extends Component {
             const loopListings = () => {
                 return item.listings.map((listing, i) => {
                     return(
-                        <div  key = {i}>
+                        <Link to ={`/for-sale`}  key = {i}>
                             {listing.name}
-                        </div>
+                        </Link>
                     );
                 });
             }
