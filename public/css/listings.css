@@ -3,7 +3,7 @@
 }
 .listingsPage #filter {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     padding: 3rem 0;
 }
 .listingsPage #filter .makeModel {
@@ -21,17 +21,18 @@
 .listingsPage #listView .whiteBox .changeView {
     display: flex;
     flex-flow: row;
+    margin-bottom: 1rem;
 }
 .listingsPage #listView .whiteBox .allItems {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-flow: row wrap;
     grid-gap: 20px 20px;
-    padding: 20px 0;
-}
+} 
 .listingsPage #listView .whiteBox .allItems .item {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    min-width: 314px;
 }
 .listingsPage #listView .whiteBox .allItems .item .image {
     height: 250px;
@@ -47,14 +48,12 @@
     border-radius: 3px;
 }
 .listingsPage #listView .whiteBox .allItems .item .details {
-    padding: 10px;
-    margin-bottom: 5px;
-    position: relative;
+    padding: 0 10px;
 }
 .listingsPage #listView .whiteBox .allItems .item .details h5 {
     font-size: 1rem;
     color: #27292d;
-    line-height: 1.5;
+    line-height: 1;
     text-transform: capitalize;
 }
 .listingsPage #listView .whiteBox .allItems .item .details .fa-star {
@@ -111,3 +110,32 @@
     background: white;
     color: #f2bb16;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .listingsPage #listView .whiteBox .allItems {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    grid-gap: 20px 20px;
+    padding: 20px 0;
+}
+.listingsPage #listView .whiteBox .allItems .item {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    max-height: 340px;
+    min-width: 300px;
+} */
