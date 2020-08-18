@@ -1,98 +1,201 @@
-.home h1 {
-    font-size: 4rem;
-    text-align: center;
-    text-transform: capitalize;
-    color: white;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding: 80px 0;
-    line-height: 1.2;
-}
-.home h1 span {
-    font-weight: 300;
-}
-.home .links {
-    background: rgba(1, 31, 38, .7);
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
+
+
+
+.home .container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 20px;
-    padding: 20px;
-    margin-bottom: 60px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 1rem;
 }
-.home .links .categories {
+
+/* =======================LEFT COLUMN============================= */
+#leftCol{
+    text-align: center;
+    background: rgba(139, 9, 255, 0.7);
+    margin: 1rem 0 0 0;
+}
+#leftCol h1{
+    font-family: 'Libre Caslon Display', serif;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    font-size: 2rem;
+    color: black;
+    margin: 0;
+    padding: 0.5rem;
+}
+#leftCol h1:hover{
+    color: rgba(139, 9, 255, 0.7);
+    background: linear-gradient(135deg, rgba(255, 255, 255, .9) 0%, rgba(175, 172, 174, 0.9) 100%);
+    text-decoration: underline;
+}
+#leftCol .heading div{
+    color: rgb(139, 9, 255);
+    cursor: pointer;
+    padding: .15rem 0;
+    color: white;
+}
+#leftCol .heading div:hover{
+    color: blue;
+}
+#leftCol .calendarTable{
+    margin: 2rem 0;
+}
+#leftCol .calendarTable table{
+    border: 1px solid black;
+    margin: 0 auto;
+    background: rgb(209, 209, 209);
+    border-radius: 5px;
+}
+#leftCol .calendarTable table tr th{
+    margin: 0 auto;
+    background: white;
+    border-radius: 5px;
+}
+#leftCol .calendarTable table tr td{
+    border: 1px solid black;
+    margin: 0 auto;
+    cursor: pointer;
+}
+#leftCol .calendarTable table tr td:hover{
+    color: white;
+    background: rgb(60, 128, 255);
+    border: 1px solid white;
+}
+#leftCol .aboutLinks {
+    margin: 2rem 0;
+}
+#leftCol .aboutLinks div{
+    color: rgb(139, 9, 255);
+    cursor: pointer;
+    padding: .15rem 0;
+    color: white;
+}
+#leftCol .aboutLinks div:hover {
+    color: blue;
+}
+/* =======================LEFT COLUMN============================= */
+
+/* =======================CENTER COLUMN============================= */
+.home .container #centerCol .centerHeader {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Libre Caslon Display', serif;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.home .container #centerCol .centerHeader h1{
+    margin: 1rem 0;
+    padding: .5rem 0;
+    color: black;
+    background: rgba(139, 9, 255, 0.7);
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+}
+.home .container #centerCol .centerHeader h1:hover{
+    background: linear-gradient(135deg, rgba(255, 255, 255, .9) 0%, rgba(175, 172, 174, 0.9) 100%);
+    color: #8B09FF;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    text-decoration: underline;
+}
+.home .container #centerCol .links {
+    background: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    /* grid-gap: 80px; */
+    /* padding: 20px; */
+    margin: 0 auto 60px;
+}
+.home .container #centerCol .links .categories {
     display: flex;
     flex-flow: column;
-    border-right: 1px solid rgba(255, 255, 255, .1);
 }
-.home .links .categories:nth-child(4) {
-    border: none;
-}
-.home .links .categories .title {
+.home .container #centerCol .links .categories .title {
     color: white;
     font-size: 0.9rem;
     text-transform: uppercase;
+    text-align: center;
     margin: 0 0 0.9rem 0;
     font-weight: 500;
     letter-spacing: 1.5px;
     text-decoration: none;
     cursor: pointer;
+    background: rgba(139, 9, 255, 0.7);
+    padding: .5rem;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
 }
-.home .links .categories .groupLinks {
+.home .container #centerCol .links .categories .title:hover {
+    background: transparent;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: rgb(139, 9, 255);
+}
+.home .container #centerCol .links .categories .groupLinks {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    font-size: 0.8rem;
-    font-weight: 300;
-    color: white;
+    font-size: 0.9rem;
+    font-weight: 400;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
 }
-.home .links .categories .groupLinks.singleCol {
+/* .home .container #centerCol .links .categories .groupLinks:nth-child(1n+3) {
+    border-left: 1px solid white;
+} */
+.home .container #centerCol .links .categories .groupLinks.singleCol {
     grid-template-columns: repeat(1, 1fr);
 }
-.home .links .categories .groupLinks a {
+.home .container #centerCol .links .categories .groupLinks a {
     text-decoration: none;
     text-transform: lowercase;
-    color: white;
+    color: #8B09FF;
     margin: 0 0 0.3rem 0;
     letter-spacing: 2px;
+    padding: 0 1rem;
 }
-.home .links .categories .groupLinks a:hover {
-    color: blue;
+.home .container #centerCol .links .categories .groupLinks a:hover {
+    color: #ffffff;
 }
-.home .trending {
+.home .container .trending {
     max-width: 700px;
     margin: 0 auto;
 }
-.home .trending .search {
+.home .container .trending .search {
     width: 100%;
     font-size: 1rem;
     border-radius: 50px;
     border: 1px solid rgba(0, 0, 0, .3);
     padding: 10px;
 }
-.home .trending .search::placeholder {
+.home .container #centerCol .trending .search::placeholder {
     color: rgba(0, 0, 0, .5);
 }
-.home .trending .title {
+.home .container #centerCol .trending .title {
     font-size: 1rem;
-    color: white;
+    color: #8B09FF;
     text-align: center;
     padding: 20px 0 10px 0;
     text-transform: uppercase;
     font-weight: 400;
 }
-.home .trending .trendingTags {
+.home .container #centerCol .trending .trendingTags {
     text-align: center;
 }
-.home .trending .trendingTags .tag {
+.home .container #centerCol .trending .trendingTags .tag {
     padding: 10px 20px;
     margin: 5px;
     border-radius: 50px;
-    border: 1px solid white;
+    border: 1px solid #8B09FF;
     display: inline-block;
-    color: white;
+    color: #8B09FF;
 }
-.home .trending .trendingTags .tag:hover {
-    background: white;
-    color: #f2bb16;
-    border: 1px solid #f2bb16;
+.home .container #centerCol .trending .trendingTags .tag:hover {
+    background: #8B09FF;
+    color: white;
+    border: 1px solid white;
     cursor: pointer;
 }
+/* =======================CENTER COLUMN============================= */

@@ -8,96 +8,13 @@
 }
  html, body {
 	 font-family: 'Roboto', sans-serif;
-	 background: yellow;
-	 background: linear-gradient(135deg, rgba(191, 128, 11, .8) 0%, rgba(37, 217, 184, .8) 100%), url('https://upload.wikimedia.org/wikipedia/commons/c/c1/Portland%2C_Oregon_skyline_from_the_Ross_Island_Bridge.jpg') center top no-repeat;
+	 background: linear-gradient(135deg, rgba(255, 255, 255, .9) 0%, rgba(175, 172, 174, 0.9) 100%), url('https://upload.wikimedia.org/wikipedia/commons/c/c1/Portland%2C_Oregon_skyline_from_the_Ross_Island_Bridge.jpg') center top no-repeat;
 	 background-size: cover;
 	 min-height: 100vh;
      min-width: 300px;
 }
- header {
-	 padding: 20px;
-	 display: flex;
-	 flex-flow: row wrap;
-	 justify-content: space-between;
-	 color: white;
-}
- header .leftMenu {
-	 display: flex;
-}
- header .leftMenu .logo {
-	 font-size: 2rem;
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 text-decoration: none;
-	 color: white;
-}
- header .leftMenu .cityDropdown {
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 padding: 15px 20px;
-	 position: relative;
-	 cursor: pointer;
-	 text-align: center;
-}
- header .leftMenu .cityDropdown .scrollArea {
-	 position: absolute;
-	 background: rgba(0, 0, 0, 0);
-	 top: 0;
-	 left: 0;
-	 width: 100%;
-	 height: 1px;
-	 overflow: hidden;
-	 opacity: 0;
-	 visibility: hidden;
-	 transition: all 0.5s ease-in-out;
-}
- header .leftMenu .cityDropdown .scrollArea.active {
-	 visibility: visible;
-	 top: 35px;
-	 opacity: 1;
-	 height: 160px;
-	 overflow-x: hidden;
-	 overflow-y: auto;
-}
- header .leftMenu .cityDropdown .scrollArea ul li {
-	 padding: 5px 0;
-	 border-radius: 5px;
-}
- header .leftMenu .cityDropdown .scrollArea ul li:hover {
-	 background: rgba(0, 0, 0, .2);
-}
- header .rightMenu {
-	 display: flex;
-}
- header .rightMenu .userImg {
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 background: rgba(0, 247, 255, 0.822);
-	 padding: 15px;
-	 text-align: center;
-	 border-radius: 50px;
-}
- header .rightMenu .userDropdown {
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 padding: 15px 20px;
-}
- header .rightMenu .postBtn {
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 padding: 15px 20px;
-	 background: #f2bb16;
-	 color: white;
-	 font-weight: 300;
-	 border-radius: 10px;
-}
- .container {
-     max-width: 1300px;
-	 margin: 0 auto;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
  

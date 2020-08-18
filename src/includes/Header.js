@@ -14,10 +14,10 @@ export default class Header extends Component {
 			<div className="container">
 				<header>
 					<div className={'leftMenu'}>
-						RenosPlaza
+						<h1>CityCenter</h1>
 						<div className={'cityDropdown'}>
                             Portland
-							<i className={`fa-chevron-down`}></i>
+							<i className={`fas fa-chevron-down`}></i>
 						</div>
 					</div>
 					<div className={'rightMenu'}>
@@ -27,7 +27,7 @@ export default class Header extends Component {
 						<div className={'userDropdown'}>
 							My Account<i className={'fas fa-chevron-down'}></i>
 						</div>
-						<div className={'postBtn'}>Post to Indexed</div>
+						{/* <div className={'postBtn'}>Post to Indexed</div> */}
 					</div>
 				</header>
 			</div>
