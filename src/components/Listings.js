@@ -58,7 +58,6 @@ export default class Listings extends Component {
                         </div>
                         <div className={'details'}>
                             <h5>{item.title}</h5>
-                            <i className="fas fa-star"></i>
                             <h6>{item.city}</h6>
                         </div>
                     </Link>
@@ -74,7 +73,6 @@ export default class Listings extends Component {
                         </div>
                         <div className={'details'}>
                             <h5>{item.title}</h5>
-                            <i className="fas fa-star"></i>
                             <h6>{item.city}</h6>
                         </div>
                     </Link>
@@ -86,16 +84,17 @@ export default class Listings extends Component {
 
 	render() {
 		return (
-			<div className={'listingsPage'}>
-				<div className="container">
+            <div className="container">
+                <div className={'listingsPage'}>
 					{/* ===================================FILTER OPTIONS====================================== */}
 					<section id={'filter'}>
 						{/* ==============DROPDOWN PRICE==================== */}
+                        <h1>{this.state.listingsData[0].listing}</h1>
 						<div className={'formGroup price'}>
 							<label>Price</label>
 							<div className={'minMax'}>
 								<select id={'minPrice'} className={'minPrice'} onClick = {this.minPrice}>
-									<option value="0">0</option>
+									<option value="0">MIN</option>
 									<option value="1000">$1,000</option>
 									<option value="5000">$5,000</option>
 									<option value="10000">$10,000</option>
@@ -103,7 +102,7 @@ export default class Listings extends Component {
 									<option value="50000">$50,000</option>
 								</select>
 								<select id={'maxPrice'} className={'maxPrice'} onClick = {this.maxPrice}>
-									<option value="50000">$50,000</option>
+									<option value="50000">MAX</option>
 									<option value="5000">$5,000</option>
 									<option value="10000">$10,000</option>
 									<option value="20000">$20,000</option>
@@ -134,33 +133,32 @@ export default class Listings extends Component {
 							<div className="resetBtn">Reset</div>
 						</div>
 					</section>
+                    {/* =====================================FILTER RESULTS==================================== */}
+                    <section id={'listView'}>
+                        <div className="container">
+                            <div className={'whiteBox'}>
+                                <section className={'changeView'}>
+                                    {/* ==============DROPDOWN VIEWDROPDOWN========== */}
+                                    <div className={'formGroup viewDropdown'}>
+                                        <select name={'selectView'} className={'selectView'}>
+                                            <option value="gallery">Gallery View</option>
+                                            <option value="list">List View</option>
+                                            <option value="thumb">Thumb View</option>
+                                        </select>
+                                    </div>
+
+                                    {/* ===================NEWEST==================== */}
+                                    <div className={'formGroup sortDropdown'}>
+                                        <select name={'sortDropdown'} className={'sortDropdown'}>
+                                            <option value="newest">Newest</option>
+                                        </select>
+                                    </div>
+                                </section>
+                                <section className={'allItems'}>{this.loopItems()}</section>
+                            </div>
+                        </div>
+                    </section>
 				</div>
-
-				{/* =====================================FILTER RESULTS==================================== */}
-				<section id={'listView'}>
-					<div className="container">
-						<div className={'whiteBox'}>
-							<section className={'changeView'}>
-								{/* ==============DROPDOWN VIEWDROPDOWN========== */}
-								<div className={'formGroup viewDropdown'}>
-									<select name={'selectView'} className={'selectView'}>
-										<option value="gallery">Gallery View</option>
-										<option value="list">List View</option>
-										<option value="thumb">Thumb View</option>
-									</select>
-								</div>
-
-								{/* ===================NEWEST==================== */}
-								<div className={'formGroup sortDropdown'}>
-									<select name={'sortDropdown'} className={'sortDropdown'}>
-										<option value="newest">Newest</option>
-									</select>
-								</div>
-							</section>
-							<section className={'allItems'}>{this.loopItems()}</section>
-						</div>
-					</div>
-				</section>
 			</div>
 		);
 	}

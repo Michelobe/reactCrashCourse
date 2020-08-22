@@ -1,22 +1,99 @@
+.container{
+    max-width: 100vw;
+}
+
+/* ===============LEFT COLUMN FILTER AREA ========================= */
 .listingsPage {
     background: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin: 0 auto;
+}
+.listingsPage {
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin: 0 auto;
 }
 .listingsPage #filter {
     display: flex;
-    flex-flow: row wrap;
-    padding: 3rem 0;
+    flex-flow: column;
+    color: gray;
+    overflow: scroll;
 }
-.listingsPage #filter .makeModel {
+.listingsPage #filter h1{
+    margin: 1.75rem 0;
+    padding: 0 1rem;
+}
+.listingsPage .formGroup {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column;
+    align-items: flex-start;
+    padding: 0 1rem;
+    margin: 0.5rem 0;
 }
+.listingsPage .formGroup label {
+    font-weight: 500;
+}
+.listingsPage .formGroup select {
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    color: gray;
+    min-width: 100px;
+    margin: .25rem .4rem .25rem 0;
+    min-width: 73px;
+    border-color: rgb(179, 179, 179);
+    cursor: pointer;
+}
+.listingsPage .formGroup.button {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.listingsPage .formGroup.button .primaryBtn, .listingsPage .formGroup.button .resetBtn {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+.listingsPage .formGroup.button .primaryBtn {
+    background: #8B09FF;
+    color: white;
+    border: 1px solid transparent;
+    width: 73px;
+    margin-bottom: .25rem;
+}
+.listingsPage .formGroup.button .primaryBtn:hover{
+    background: white;
+    color: #8B09FF;
+    border: 1px solid #8B09FF;
+}
+.listingsPage .formGroup.button .resetBtn {
+    background: white;
+    color: #8B09FF;
+    border: 1px solid #8B09FF;
+    width: 73px;
+}
+.listingsPage .formGroup.button .resetBtn:hover {
+    background: #8B09FF;
+    color: white;
+    border: 1px solid #8B09FF;
+}
+/* ===============LEFT COLUMN FILTER AREA ========================= */
+
+
+/* ===============RIGHT COLUMN LISTING AREA ========================= */
 .listingsPage #listView {
     background: #f1f1f1;
-    padding: 1.2rem 0;
+}
+.listingsPage #listView .container{
+    max-width: 100vw;
 }
 .listingsPage #listView .whiteBox {
     background: white;
-    padding: 1.2rem;
+    padding: 0 .5rem 1.2rem .5rem;
 }
 .listingsPage #listView .whiteBox .changeView {
     display: flex;
@@ -26,14 +103,14 @@
 .listingsPage #listView .whiteBox .allItems {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     grid-gap: 20px 20px;
 } 
 .listingsPage #listView .whiteBox .allItems .item {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    min-width: 314px;
+    min-width: 300px;
 }
 .listingsPage #listView .whiteBox .allItems .item .image {
     height: 250px;
@@ -72,71 +149,4 @@
     color: #565d68;
     text-transform: capitalize;
 }
-.listingsPage .formGroup {
-    display: flex;
-    flex-flow: column nowrap;
-}
-.listingsPage .formGroup label {
-    font-weight: 500;
-    margin: 0 0 0.8rem 0;
-}
-.listingsPage .formGroup select {
-    background: white;
-    border-radius: 5px;
-    padding: 5px;
-    color: gray;
-    min-width: 100px;
-    margin-right: 15px;
-}
-.listingsPage .formGroup.button {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-}
-.listingsPage .formGroup.button .primaryBtn, .listingsPage .formGroup.button .resetBtn {
-    border-radius: 10px;
-    padding: 10px;
-    margin: 0 0.5rem;
-    cursor: pointer;
-}
-.listingsPage .formGroup.button .primaryBtn:hover, .listingsPage .formGroup.button .resetBtn:hover {
-    background: #25d9b8;
-    color: #f2bb16;
-}
-.listingsPage .formGroup.button .primaryBtn {
-    background: #f2bb16;
-    color: white;
-}
-.listingsPage .formGroup.button .resetBtn {
-    background: white;
-    color: #f2bb16;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .listingsPage #listView .whiteBox .allItems {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    grid-gap: 20px 20px;
-    padding: 20px 0;
-}
-.listingsPage #listView .whiteBox .allItems .item {
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    max-height: 340px;
-    min-width: 300px;
-} */
+/* ===============RIGHT COLUMN LISTING AREA ========================= */

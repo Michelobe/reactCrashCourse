@@ -1,84 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
-
-
 
 .home .container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 2fr 6fr 1fr;
     grid-gap: 1rem;
 }
 
 /* =======================LEFT COLUMN============================= */
-#leftCol{
+.home .container #leftCol{
     text-align: center;
-    background: rgba(139, 9, 255, 0.7);
+    background: linear-gradient(135deg, rgba(255, 255, 255, .9) 0%, rgba(175, 172, 174, 0.9) 100%);
+    border-left: 1px solid white;
+    border-right: 1px solid white;
     margin: 1rem 0 0 0;
 }
-#leftCol h1{
+.home .container #leftCol h1{
     font-family: 'Libre Caslon Display', serif;
     letter-spacing: 1.5px;
     font-weight: bold;
     font-size: 2rem;
-    color: black;
+    color: rgb(168, 168, 168);
     margin: 0;
     padding: 0.5rem;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    transition: .4s;
 }
-#leftCol h1:hover{
+.home .container #leftCol h1:hover{
     color: rgba(139, 9, 255, 0.7);
     background: linear-gradient(135deg, rgba(255, 255, 255, .9) 0%, rgba(175, 172, 174, 0.9) 100%);
     text-decoration: underline;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
 }
-#leftCol .heading div{
+.home .container #leftCol .heading div{
     color: rgb(139, 9, 255);
     cursor: pointer;
     padding: .15rem 0;
-    color: white;
+    color: rgb(168, 168, 168);
 }
-#leftCol .heading div:hover{
-    color: blue;
+.home .container #leftCol .heading div:hover{
+    color: #8B09FF;
 }
-#leftCol .calendarTable{
+.home .container #leftCol .calendarTable{
     margin: 2rem 0;
 }
-#leftCol .calendarTable table{
+.home .container #leftCol .calendarTable table{
     border: 1px solid black;
     margin: 0 auto;
     background: rgb(209, 209, 209);
     border-radius: 5px;
 }
-#leftCol .calendarTable table tr th{
+.home .container #leftCol .calendarTable table tr th{
     margin: 0 auto;
     background: white;
     border-radius: 5px;
 }
-#leftCol .calendarTable table tr td{
+.home .container #leftCol .calendarTable table tr td{
     border: 1px solid black;
     margin: 0 auto;
     cursor: pointer;
 }
-#leftCol .calendarTable table tr td:hover{
+.home .container #leftCol .calendarTable table tr td:hover{
     color: white;
-    background: rgb(60, 128, 255);
+    background: #8B09FF;
     border: 1px solid white;
 }
-#leftCol .aboutLinks {
+.home .container #leftCol .aboutLinks {
     margin: 2rem 0;
 }
-#leftCol .aboutLinks div{
+.home .container #leftCol .aboutLinks div{
     color: rgb(139, 9, 255);
     cursor: pointer;
     padding: .15rem 0;
     color: white;
 }
-#leftCol .aboutLinks div:hover {
-    color: blue;
+.home .container #leftCol .aboutLinks div:hover {
+    color: #8B09FF;
 }
 /* =======================LEFT COLUMN============================= */
 
 /* =======================CENTER COLUMN============================= */
 .home .container #centerCol .centerHeader {
-    max-width: 800px;
-    margin: 0 auto;
     text-align: center;
     font-family: 'Libre Caslon Display', serif;
     letter-spacing: 1.5px;
@@ -88,16 +90,14 @@
 .home .container #centerCol .centerHeader h1{
     margin: 1rem 0;
     padding: .5rem 0;
-    color: black;
-    background: rgba(139, 9, 255, 0.7);
-    border-bottom: 1px solid transparent;
-    border-top: 1px solid transparent;
-}
-.home .container #centerCol .centerHeader h1:hover{
+    color: rgb(168, 168, 168);
     background: linear-gradient(135deg, rgba(255, 255, 255, .9) 0%, rgba(175, 172, 174, 0.9) 100%);
-    color: #8B09FF;
     border-bottom: 1px solid white;
     border-top: 1px solid white;
+    transition: .4s;
+}
+.home .container #centerCol .centerHeader h1:hover{
+    color: #8B09FF;
     text-decoration: underline;
 }
 .home .container #centerCol .links {
@@ -127,6 +127,7 @@
     padding: .5rem;
     border-bottom: 1px solid transparent;
     border-top: 1px solid transparent;
+    transition: .5s;
 }
 .home .container #centerCol .links .categories .title:hover {
     background: transparent;
@@ -142,9 +143,6 @@
     border-right: 1px solid white;
     border-left: 1px solid white;
 }
-/* .home .container #centerCol .links .categories .groupLinks:nth-child(1n+3) {
-    border-left: 1px solid white;
-} */
 .home .container #centerCol .links .categories .groupLinks.singleCol {
     grid-template-columns: repeat(1, 1fr);
 }
@@ -199,3 +197,38 @@
     cursor: pointer;
 }
 /* =======================CENTER COLUMN============================= */
+
+
+/* =======================RIGHT COLUMN============================= */
+.home .container #rightCol{
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .9) 0%, rgba(175, 172, 174, 0.9) 100%);
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    margin: 1rem 0 0 0;
+}
+.home .container #rightCol h1{
+    font-family: 'Libre Caslon Display', serif;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(168, 168, 168);
+    margin: 0;
+    padding: 0.5rem;
+    transition: .4s;
+}
+.home .container #rightCol h1:hover{
+    color: rgba(139, 9, 255, 0.7);
+    background: linear-gradient(135deg, rgba(255, 255, 255, .9) 0%, rgba(175, 172, 174, 0.9) 100%);
+    text-decoration: underline;
+}
+.home .container #rightCol .nearLink{
+    color: rgb(139, 9, 255);
+    cursor: pointer;
+    padding: .15rem 0;
+    color: rgb(168, 168, 168);
+}
+.home .container #rightCol .nearLink:hover{
+    color: #8B09FF;
+}
+/* =======================RIGHT COLUMN============================= */

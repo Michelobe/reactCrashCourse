@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {
+    Link
+} from "react-router-dom";
 
 export default class Header extends Component {
 	constructor() {
@@ -13,8 +16,10 @@ export default class Header extends Component {
 		return (
 			<div className="container">
 				<header>
+                    <Link to ={`/`} className = {'homeLink'}>
+                        <h1>CityShop</h1>
+                    </Link>
 					<div className={'leftMenu'}>
-						<h1>CityCenter</h1>
 						<div className={'cityDropdown'}>
                             Portland
 							<i className={`fas fa-chevron-down`}></i>

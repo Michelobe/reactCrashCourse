@@ -15,20 +15,18 @@ export default class Details extends Component {
 						{/* =======================SUBMENU=========================== */}
 						<section className={'subMenu'}>
 							<div className={'direction'}>
-								<div className={'next'}>
-									Next
-								</div>
-								<div className={'prev'}>
+								<div className={'prev btn'}>
 									Prev
+								</div>
+								<div className={'next btn'}>
+									Next
 								</div>
 							</div>
 							<nav className={'subLinks'}>
 								<div className = {'link'}>More ads by this user</div>
 								<div className = {'link'}>Print</div>
 								<div className = {'link'}>Share</div>
-								<select>
-									<option>Contact Seller</option>
-								</select>
+								<div className = {'link'}>Contact Seller</div>
 							</nav>
 						</section>
 						{/* =======================SUBMENU=========================== */}

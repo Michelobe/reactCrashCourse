@@ -153,7 +153,7 @@ export default class Home extends Component {
 
                     {/* ===============CENTER COLUMN================ */}
                     <section id = "centerCol">
-                        <div class = {'centerHeader'}>
+                        <div className = {'centerHeader'}>
                             <h1>Portland, OR</h1>
                         </div>
                         <div className={'links'}>
@@ -178,6 +178,18 @@ export default class Home extends Component {
                     {/* ===============RIGHT COLUMN================ */}
                     <section id = "rightCol">
                         <h1>Nearby</h1>
+                        <div className = {'nearLink'}>bellingham</div>
+                        <div className = {'nearLink'}>bend</div>
+                        <div className = {'nearLink'}>boise</div>
+                        <div className = {'nearLink'}>chico</div>
+                        <div className = {'nearLink'}>corvallis</div>
+                        <div className = {'nearLink'}>east oregon</div>
+                        <div className = {'nearLink'}>eugene</div>
+                        <div className = {'nearLink'}>humboldt</div>
+                        <div className = {'nearLink'}>kalispell</div>
+                        <div className = {'nearLink'}>kalamath falls</div>
+                        <div className = {'nearLink'}>lewiston</div>
+                        <div className = {'nearLink'}>medford</div>
                     </section>
                     {/* ===============RIGHT COLUMN================ */}
 

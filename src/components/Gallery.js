@@ -13,12 +13,12 @@ export default class Gallery extends Component {
 	// ===========LOADS ALL THUMBNAIL IMAGES AND CURRENT IMAGE==============
 	UNSAFE_componentWillMount() {
 		const allImages = [
-			'https://images.craigslist.org/01616_ep9cNjQFdnD_600x450.jpg',
-			'https://images.craigslist.org/00505_evOFhGSA5lL_600x450.jpg',
-			'https://images.craigslist.org/00l0l_kKyVDgq58tO_600x450.jpg',
-			'https://images.craigslist.org/00Q0Q_dgOdVCOKPtj_600x450.jpg',
-			'https://images.craigslist.org/00I0I_Q0ippO6aES_600x450.jpg',
-			'https://images.craigslist.org/00j0j_hdOJYC2yGwR_600x450.jpg'
+            'https://images.craigslist.org/00M0M_aFmrTzaBfTO_0cU09G_600x450.jpg',
+            'https://images.craigslist.org/00303_4A2jLuBQgEK_0cU09G_600x450.jpg',
+            'https://images.craigslist.org/00s0s_cKbtqL6rjAZ_0cU09G_600x450.jpg',
+            'https://images.craigslist.org/00D0D_3qmifq1bp6T_0cU09G_600x450.jpg',
+            'https://images.craigslist.org/00808_hQE2MHGsUt2_0cU09G_600x450.jpg',
+            'https://images.craigslist.org/00404_vWieaLwnkR_0cU09G_600x450.jpg'
 		];
 		this.setState({
 			allImages: allImages,

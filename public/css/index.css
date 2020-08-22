@@ -1,20 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
  @import "reset";
  @import "home.css";
+ @import "header.css";
  @import "listings.css";
  @import "itemDetails.css";
+
+
  * {
 	 box-sizing: border-box;
 }
  html, body {
 	 font-family: 'Roboto', sans-serif;
-	 background: linear-gradient(135deg, rgba(255, 255, 255, .9) 0%, rgba(175, 172, 174, 0.9) 100%), url('https://upload.wikimedia.org/wikipedia/commons/c/c1/Portland%2C_Oregon_skyline_from_the_Ross_Island_Bridge.jpg') center top no-repeat;
+	 background: linear-gradient(135deg, rgba(255, 255, 255, .95) 0%, rgba(175, 172, 174, 0.95) 100%), url('https://upload.wikimedia.org/wikipedia/commons/c/c1/Portland%2C_Oregon_skyline_from_the_Ross_Island_Bridge.jpg') center top no-repeat;
 	 background-size: cover;
 	 min-height: 100vh;
      min-width: 300px;
+     margin: 0;
 }
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
  
