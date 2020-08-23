@@ -73,6 +73,7 @@ class App extends Component {
             <Router>
                 <div className="App">
                         <Route exact path = '/'>
+                            <Header />
                             <Home categoriesData = {this.state.categoriesData} />
                         </Route>
                         <Route exact path = '/:for-sale'>

@@ -9,7 +9,8 @@ export default class Home extends Component {
 		super();
 		this.state = {
             //categoriesData set by componentWillMount
-            currentIndex: 0
+            currentIndex: 0,
+            isActive: false
 		};
     }
 
@@ -41,8 +42,12 @@ export default class Home extends Component {
                     >
                         {item.title}
                     </Link>
+                    <div className = {'mobileCategory'}
+                         onClick = {this.changeActive}>
+                        {item.title}
+                    </div>
                     <div
-                            className={`groupLinks ${item.title === 'jobs' || item.title === 'housing' ? 'singleCol' : ''}`}
+                            className={`groupLinks ${item.title === 'jobs' || item.title === 'housing' ? 'singleCol' : ''} ${this.state.isActive ? 'active' : ''}`}
                             key = {i}
                         >
                         {loopListings()}
@@ -62,10 +67,35 @@ export default class Home extends Component {
 				</div>
 			);
 		});
-	}
+    }
+    
+    // =============================MEDIA QUERY DROPDOWN===============================
+    changeActive = () => {
+        let active = this.state.isActive;
+
+
+        if(active === 'true'){
+            this.setState({
+                isActive: !active
+            }, () => {
+                console.log(this.state.isActive);
+            });
+        }
+        else{
+            this.setState({
+                isActive: !active
+            }, () => {
+                console.log(this.state.isActive);
+            });
+        }
+    }
+    // =============================MEDIA QUERY DROPDOWN===============================
+
+
     // =============================CENTER COLUMN===============================
 
 	render() {
+
 		return (
 			<div className={'home'}>
 				<div className="container">
