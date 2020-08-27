@@ -23,8 +23,9 @@
 /* ==================================TABLET===================================== */
 /* IPAD PRO */
 @media only screen and (max-width: 1300px) {
-    .home .container{
+    .home{
         max-width: 1000px;
+        margin: 0 auto;
     }
     .home .container #centerCol .links{
         background: transparent;
@@ -44,9 +45,10 @@
         position: static;
         visibility: visible;
     }
-    .home .container{
+    .home{
         max-width: 750px;
-        display: grid;
+    }
+    .home .container{
         grid-template-columns: repeat(3, 1fr);
     }
     /* .home .container #leftCol{
@@ -79,6 +81,42 @@
     }
 }
 /* IPAD */
+
+/* LARGE PHONE */
+@media only screen and (max-width: 450px) {
+    .home{
+        max-width: 450px;
+    }
+    .home .container{
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        width: 90%;
+    }
+    .home .container #leftCol{
+        margin: 0;
+        border: none;
+    }
+    .home .container #leftCol h1{
+        position: absolute;
+        visibility: hidden;
+    }
+    .home .container #leftCol .heading{
+        position: absolute;
+        visibility: hidden;
+    }
+    .home .container #centerCol .links .categories{
+        width: 100%;
+    }
+    .home .container #rightCol{
+        margin: 0;
+        padding: 0 0 .5rem 0;
+        border: none;
+    }
+    .home .container #rightCol h1{
+        font-size: 1.75rem;
+    }
+}
+/* LARGE PHONE */
 
 
 

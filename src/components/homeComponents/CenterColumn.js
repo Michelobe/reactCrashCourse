@@ -30,10 +30,8 @@ export default class CenterColumn extends Component {
     // =============================LOOP LISTING FUNCTIONS===============================
     loopListingOne = () => {
         let category = this.props.categoriesData;
-        console.log(category[0].title);
 
         return category[0].listings.map((listing, i) => {
-            console.log(listing);
             return(
                 <Link to ={`/for-sale`}  key = {i}>
                     {listing.name}
@@ -43,10 +41,8 @@ export default class CenterColumn extends Component {
     }
     loopListingTwo = () => {
         let category = this.props.categoriesData;
-        console.log(category[1].title);
 
         return category[1].listings.map((listing, i) => {
-            console.log(listing);
             return(
                 <Link to ={`/for-sale`}  key = {i}>
                     {listing.name}
@@ -56,10 +52,8 @@ export default class CenterColumn extends Component {
     }
     loopListingThree = () => {
         let category = this.props.categoriesData;
-        console.log(category[2].title);
 
         return category[2].listings.map((listing, i) => {
-            console.log(listing);
             return(
                 <Link to ={`/for-sale`}  key = {i}>
                     {listing.name}
@@ -69,10 +63,8 @@ export default class CenterColumn extends Component {
     }
     loopListingFour = () => {
         let category = this.props.categoriesData;
-        console.log(category[3].title);
 
         return category[3].listings.map((listing, i) => {
-            console.log(listing);
             return(
                 <Link to ={`/for-sale`}  key = {i}>
                     {listing.name}
@@ -82,10 +74,8 @@ export default class CenterColumn extends Component {
     }
     loopListingFive = () => {
         let category = this.props.categoriesData;
-        console.log(category[4].title);
 
         return category[4].listings.map((listing, i) => {
-            console.log(listing);
             return(
                 <Link to ={`/for-sale`}  key = {i}>
                     {listing.name}
@@ -95,10 +85,8 @@ export default class CenterColumn extends Component {
     }
     loopListingSix = () => {
         let category = this.props.categoriesData;
-        console.log(category[5].title);
 
         return category[5].listings.map((listing, i) => {
-            console.log(listing);
             return(
                 <Link to ={`/for-sale`}  key = {i}>
                     {listing.name}
@@ -108,10 +96,8 @@ export default class CenterColumn extends Component {
     }
     loopListingSeven = () => {
         let category = this.props.categoriesData;
-        console.log(category[6].title);
 
         return category[6].listings.map((listing, i) => {
-            console.log(listing);
             return(
                 <Link to ={`/for-sale`}  key = {i}>
                     {listing.name}
@@ -121,10 +107,8 @@ export default class CenterColumn extends Component {
     }
     loopListingEight = () => {
         let category = this.props.categoriesData;
-        console.log(category[7].title);
 
         return category[7].listings.map((listing, i) => {
-            console.log(listing);
             return(
                 <Link to ={`/for-sale`}  key = {i}>
                     {listing.name}
@@ -152,7 +136,6 @@ export default class CenterColumn extends Component {
     // =============================MEDIA QUERY DROPDOWN===============================
     changeBoolOne = () => {
         let isActiveOne = this.state.isActiveOne;
-        console.log(isActiveOne);
 
         if(isActiveOne === false){
             this.setState({
@@ -166,7 +149,6 @@ export default class CenterColumn extends Component {
     }
     changeBoolTwo = () => {
         let isActiveTwo = this.state.isActiveTwo;
-        console.log(isActiveTwo);
 
         if(isActiveTwo === false){
             this.setState({
@@ -180,7 +162,6 @@ export default class CenterColumn extends Component {
     }
     changeBoolThree = () => {
         let isActiveThree = this.state.isActiveThree;
-        console.log(isActiveThree);
 
         if(isActiveThree === false){
             this.setState({
@@ -194,7 +175,6 @@ export default class CenterColumn extends Component {
     }
     changeBoolFour = () => {
         let isActiveFour = this.state.isActiveFour;
-        console.log(isActiveFour);
 
         if(isActiveFour === false){
             this.setState({
@@ -208,7 +188,6 @@ export default class CenterColumn extends Component {
     }
     changeBoolFive = () => {
         let isActiveFive = this.state.isActiveFive;
-        console.log(isActiveFive);
 
         if(isActiveFive === false){
             this.setState({
@@ -222,7 +201,6 @@ export default class CenterColumn extends Component {
     }
     changeBoolSix = () => {
         let isActiveSix = this.state.isActiveSix;
-        console.log(isActiveSix);
 
         if(isActiveSix === false){
             this.setState({
@@ -236,7 +214,6 @@ export default class CenterColumn extends Component {
     }
     changeBoolSeven = () => {
         let isActiveSeven = this.state.isActiveSeven;
-        console.log(isActiveSeven);
 
         if(isActiveSeven === false){
             this.setState({
@@ -250,19 +227,17 @@ export default class CenterColumn extends Component {
     }
     // =============================MEDIA QUERY DROPDOWN===============================
 
+    // =============================TOGGLE SEEMORE CLASS===============================
     seeMoreToggle = () => {
         let seeMore = this.state.seeMore;
 
-        if(seeMore === true){
-            this.setState({
-                seeMore: !seeMore
-            })
-        }else{
+        if(seeMore === true || seeMore === false){
             this.setState({
                 seeMore: !seeMore
             })
         }
     }
+    // =============================TOGGLE SEEMORE CLASS===============================
 
 	render() {
         let categories = this.state.categoriesData;
@@ -415,10 +390,12 @@ export default class CenterColumn extends Component {
                     <div className={'title'}>
                         <i className="far fa-clock"></i>Trending Now
                     </div>
+                    {/* =====================================TRENDING LOOP==================================== */}
                     <div className={`trendingTags ${this.state.seeMore ? 'active' : ''}`}>{this.loopTags()}</div>
                     <div className = {`seeMoreLess`} onClick = {this.seeMoreToggle}>
                         <div className = {`btn seeMore ${this.state.seeMore ? 'active' : ''}`}>See More</div>
                         <div className = {`btn seeLess ${this.state.seeMore ? 'active' : ''}`}>See Less</div>
+                    {/* =====================================TRENDING LOOP==================================== */}
                     </div>
                 </div>
             </section>

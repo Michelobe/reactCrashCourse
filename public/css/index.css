@@ -22,4 +22,11 @@
     max-width: 1300px;
     margin: 0 auto;
 }
- 
+
+/* LARGE PHONE */
+@media only screen and (max-width: 450px) {
+    .container{
+        max-width: 400px;
+    }
+}
+/* LARGE PHONE */

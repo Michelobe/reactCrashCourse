@@ -35,3 +35,19 @@
     color: rgb(168, 168, 168);
     text-decoration: underline;
 }
+
+
+/* LARGE PHONE */
+@media only screen and (max-width: 450px) {
+    .container header h1{
+        font-size: 2rem;
+        color: rgba(139, 9, 255, 0.7);
+    }
+    .container header .leftMenu, .container header .rightMenu{
+        font-size: 1rem;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        letter-spacing: 1px;
+    }
+}

@@ -6,7 +6,8 @@ export default class CenterCol extends Component {
 	constructor() {
 		super();
 		this.state = {
-            //categoriesData set by componentWillMount
+            //categoriesData set by componentWillMount,
+            nearbyBool: false
 		};
     }
 
@@ -18,6 +19,15 @@ export default class CenterCol extends Component {
         });
     }
 
+    toggleNearby = () => {
+        let nearbyBool = this.state.nearbyBool;
+
+        if(nearbyBool === true || nearbyBool === false){
+            this.setState({
+                nearbyBool: !nearbyBool
+            })
+        }
+    }
 
 	render() {
 		return (
@@ -111,19 +121,21 @@ export default class CenterCol extends Component {
                     
                     {/* ===============RIGHT COLUMN================ */}
                     <section id = "rightCol">
-                        <h1>Nearby</h1>
-                        <div className = {'nearLink'}>bellingham</div>
-                        <div className = {'nearLink'}>bend</div>
-                        <div className = {'nearLink'}>boise</div>
-                        <div className = {'nearLink'}>chico</div>
-                        <div className = {'nearLink'}>corvallis</div>
-                        <div className = {'nearLink'}>east oregon</div>
-                        <div className = {'nearLink'}>eugene</div>
-                        <div className = {'nearLink'}>humboldt</div>
-                        <div className = {'nearLink'}>kalispell</div>
-                        <div className = {'nearLink'}>kalamath falls</div>
-                        <div className = {'nearLink'}>lewiston</div>
-                        <div className = {'nearLink'}>medford</div>
+                        <h1 onClick = {this.toggleNearby.bind(null)}>Nearby</h1>
+                        <div className = {`nearContain ${this.state.nearbyBool ? 'active' : ''}`}>
+                            <div className = {'nearLink'}>bellingham</div>
+                            <div className = {'nearLink'}>bend</div>
+                            <div className = {'nearLink'}>boise</div>
+                            <div className = {'nearLink'}>chico</div>
+                            <div className = {'nearLink'}>corvallis</div>
+                            <div className = {'nearLink'}>east oregon</div>
+                            <div className = {'nearLink'}>eugene</div>
+                            <div className = {'nearLink'}>humboldt</div>
+                            <div className = {'nearLink'}>kalispell</div>
+                            <div className = {'nearLink'}>kalamath falls</div>
+                            <div className = {'nearLink'}>lewiston</div>
+                            <div className = {'nearLink'}>medford</div>
+                        </div>
                     </section>
                     {/* ===============RIGHT COLUMN================ */}
 
