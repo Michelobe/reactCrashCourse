@@ -1,0 +1,178 @@
+
+.home .container #centerCol .centerHeader {
+    text-align: center;
+    font-family: 'Libre Caslon Display', serif;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.home .container #centerCol .centerHeader h1{
+    margin: 1rem 0;
+    padding: .5rem 0;
+    color: rgb(168, 168, 168);
+    background: linear-gradient(135deg, rgba(255, 255, 255, .9) 0%, rgba(175, 172, 174, 0.9) 100%);
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    transition: .4s;
+}
+.home .container #centerCol .centerHeader h1:hover{
+    color: #8B09FF;
+    text-decoration: underline;
+}
+.home .container #centerCol .links {
+    background: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 0 auto 60px;
+}
+.home .container #centerCol .links .categories{
+    display: flex;
+    flex-flow: column;
+    background: transparent;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: rgb(139, 9, 255);
+}
+.home .container #centerCol .links .categories .title {
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 0.9rem 0;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    cursor: pointer;
+    background: rgba(139, 9, 255, 0.7);
+    padding: .5rem;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+}
+.home .container #centerCol .links .categories .title:hover {
+    background: transparent;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: rgb(139, 9, 255);
+}
+.home .container #centerCol .links .categories .mobileCategory{
+    position: absolute;
+    visibility: hidden;
+    color: white;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 0.9rem 0;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    cursor: pointer;
+    background: rgba(139, 9, 255, 0.7);
+    padding: .5rem;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+}
+.home .container #centerCol .links .categories .groupLinks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 0.9rem;
+    font-weight: 400;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+.home .container #centerCol .links .categories .groupLinks.active{
+    position: static;
+    visibility: visible;
+    /* transition: all .4s ease-in-out; */
+}
+.home .container #centerCol .links .categories .groupLinks.singleCol {
+    grid-template-columns: repeat(1, 1fr);
+}
+.home .container #centerCol .links .categories .groupLinks a {
+    text-decoration: none;
+    text-transform: lowercase;
+    color: #8B09FF;
+    margin: 0 0 0.3rem 0;
+    letter-spacing: 2px;
+    padding: 0 1rem;
+}
+.home .container #centerCol .links .categories .groupLinks a:hover {
+    color: #ffffff;
+}
+.home .container .trending {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.home .container .trending .search {
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    padding: 10px;
+}
+.home .container #centerCol .trending .search::placeholder {
+    color: rgba(0, 0, 0, .5);
+}
+.home .container #centerCol .trending .title {
+    font-size: 1rem;
+    color: #8B09FF;
+    text-align: center;
+    padding: 20px 0 10px 0;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.home .container #centerCol .trending .trendingTags {
+    text-align: center;
+    height: 3rem;
+    overflow: hidden;
+}
+.home .container #centerCol .trending .trendingTags.active {
+    text-align: center;
+    height: auto;
+}
+.home .container #centerCol .trending .trendingTags .tag {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 50px;
+    border: 1px solid #8B09FF;
+    display: inline-block;
+    color: #8B09FF;
+}
+.home .container #centerCol .trending .trendingTags .tag:hover {
+    background: #8B09FF;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.home .container #centerCol .trending .seeMoreLess{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home .container #centerCol .trending .btn{
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 50px;
+    border: 1px solid white;
+    display: inline-block;
+    color: white;
+    background: #8B09FF;
+}
+.home .container #centerCol .trending .seeMoreLess{
+    margin: .3rem 0;
+}
+.home .container #centerCol .trending .seeMoreLess .seeMore{
+    cursor: pointer;
+}
+.home .container #centerCol .trending .seeMoreLess .seeMore.active{
+    visibility: hidden;
+}
+.home .container #centerCol .trending .seeMoreLess .seeLess{
+    cursor: pointer;
+    visibility: hidden;
+    position: absolute;
+}
+.home .container #centerCol .trending .seeMoreLess .seeLess.active{
+    visibility: visible;
+}

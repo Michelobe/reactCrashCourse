@@ -17,6 +17,8 @@ class App extends Component {
 		this.state = {
             //categoriesData from componentWillMount
             //listingsData from componentWillMount
+            // isMobile: window innerWidth
+            mobile: 850
         };
     }
     
@@ -24,47 +26,11 @@ class App extends Component {
         //=================== DATA ========================
         var categoriesData = require('./data/categories.js');
         var listingsData = require('./data/item.js');
-        
-        // ======================================REQUIRE================================================
-        // var Consolio = fetch('https://upbeat-galileo-9a1978.netlify.app/testJson.json', {
-        //     method: 'GET', // *GET, POST, PUT, DELETE, etc.
-        //     mode: 'no-cors', // no-cors, *cors, same-origin
-        //     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        //     credentials: 'include', // include, *same-origin, omit
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //         // 'Content-Type': 'application/x-www-form-urlencoded',
-        //     }
-        // });
-        // console.log(Consolio);
-        // ========================================AXIOS ASYNC?======================================================
-        // (async () => {
-        //     try{
-        //         const response = await Axios.get('https://upbeat-galileo-9a1978.netlify.app/testJson.json');
-        //         console.log(response.data.url);
-        //         console.log(response.data.explanation);
-        //     }catch(error){
-        //         console.log(error);
-        //     }
-        // })();
-        // =========================================FETCH=========================================================
-        // fetch( "https://upbeat-galileo-9a1978.netlify.app/testJson.json", {
-        //     method: 'GET', // *GET, POST, PUT, DELETE, etc.
-        //     mode: 'no-cors', // no-cors, *cors, same-origin
-        //     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        //     credentials: 'same-origin', // include, *same-origin, omit
-        //     headers: {
-        //       'Content-Type': 'application/json'
-        //       // 'Content-Type': 'application/x-www-form-urlencoded',
-        //     }
-        //   })
-        // .then( response => response.json() )
-        // .then( json => console.log( json ) );
-        // =====================================================================================================
 
         this.setState({
             categoriesData,
-            listingsData
+            listingsData,
+            isMobile: window.innerWidth
         });
     }
 
@@ -73,7 +39,9 @@ class App extends Component {
             <Router>
                 <div className="App">
                         <Route exact path = '/'>
-                            <Header />
+                            {/* ====================HACKY FIX, NEED TO REVISIT===================== */}
+                            {this.state.isMobile < this.state.mobile ? <Header /> : ""}
+                            {/* ====================HACKY FIX, NEED TO REVISIT===================== */}
                             <Home categoriesData = {this.state.categoriesData} />
                         </Route>
                         <Route exact path = '/:for-sale'>

@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-import {
-    Link
-} from "react-router-dom";
+import CenterColumn from './homeComponents/CenterColumn.js';
 
 
-export default class Home extends Component {
+export default class CenterCol extends Component {
 	constructor() {
 		super();
 		this.state = {
             //categoriesData set by componentWillMount
-            currentIndex: 0,
-            isActive: false
 		};
     }
 
@@ -22,80 +18,8 @@ export default class Home extends Component {
         });
     }
 
-    // =============================CENTER COLUMN===============================
-    loopTitle = () => {
-        return this.state.categoriesData.map((item, i) => {
-            const loopListings = () => {
-                return item.listings.map((listing, i) => {
-                    return(
-                        <Link to ={`/for-sale`}  key = {i}>
-                            {listing.name}
-                        </Link>
-                    );
-                });
-            }
-
-            return (
-                <div key = {i} className={'categories'}>
-                    <Link to ={`/for-sale`}
-                          className={'title'}
-                    >
-                        {item.title}
-                    </Link>
-                    <div className = {'mobileCategory'}
-                         onClick = {this.changeActive}>
-                        {item.title}
-                    </div>
-                    <div
-                            className={`groupLinks ${item.title === 'jobs' || item.title === 'housing' ? 'singleCol' : ''} ${this.state.isActive ? 'active' : ''}`}
-                            key = {i}
-                        >
-                        {loopListings()}
-                    </div>
-                </div>
-            );
-        });
-    }
-    
-	loopTags = () => {
-		let testTags = [1, 2, 3, 4, 5, 6, 7];
-
-		return testTags.map(item => {
-			return (
-				<div key={item} className={'tag'}>
-					Apple Macbook
-				</div>
-			);
-		});
-    }
-    
-    // =============================MEDIA QUERY DROPDOWN===============================
-    changeActive = () => {
-        let active = this.state.isActive;
-
-
-        if(active === 'true'){
-            this.setState({
-                isActive: !active
-            }, () => {
-                console.log(this.state.isActive);
-            });
-        }
-        else{
-            this.setState({
-                isActive: !active
-            }, () => {
-                console.log(this.state.isActive);
-            });
-        }
-    }
-    // =============================MEDIA QUERY DROPDOWN===============================
-
-
-    // =============================CENTER COLUMN===============================
 
 	render() {
-
 		return (
 			<div className={'home'}>
 				<div className="container">
@@ -108,7 +32,7 @@ export default class Home extends Component {
                             <div>my account</div>
                             <input type = "text" />
                         </div>
-                        <div className = {'calendarTable'}>
+                        {/* <div className = {'calendarTable'}>
                             <table>
                                 <tr>
                                     <th>S</th>
@@ -161,7 +85,7 @@ export default class Home extends Component {
                                     <td>31</td>
                                 </tr>
                             </table>
-                        </div>
+                        </div> */}
                         <div className = {'aboutLinks'}>
                             <div>cityshop app</div>
                             <div>help, faq, abuse, legal</div>
@@ -182,27 +106,7 @@ export default class Home extends Component {
 
 
                     {/* ===============CENTER COLUMN================ */}
-                    <section id = "centerCol">
-                        <div className = {'centerHeader'}>
-                            <h1>Portland, OR</h1>
-                        </div>
-                        <div className={'links'}>
-                            {this.loopTitle()}
-                        </div>
-
-                        <div className={'trending'}>
-                            <input
-                                type="text"
-                                name="search"
-                                className="search"
-                                placeholder="Search Classifieds, Jobs, Housing, Discussions, Personals..."
-                            />
-                            <div className={'title'}>
-                                <i className="far fa-clock"></i>Trending Now
-                            </div>
-                            <div className={'trendingTags'}>{this.loopTags()}</div>
-                        </div>
-                    </section>
+                    <CenterColumn categoriesData = {this.props.categoriesData} />
                     {/* ===============CENTER COLUMN================ */}
                     
                     {/* ===============RIGHT COLUMN================ */}
@@ -230,3 +134,104 @@ export default class Home extends Component {
 		);
 	}
 }
+
+
+
+
+
+
+
+/* <section id = "centerCol">
+<div className = {'centerHeader'}>
+    <h1>Portland, OR</h1>
+</div>
+<div className={'links'}>
+    <div className={'categories'}>
+        <Link to ={`/for-sale`}
+            className={'title'}
+        >
+            {categories[0].title}
+        </Link>
+        <div className = {'mobileCategory'}
+            onClick = {this.changeBoolOne.bind(null)}>
+            {categories[0].title}
+        </div>
+        <div
+        className={`groupLinks ${categories[0].title === 'jobs' || categories[0].title === 'housing' ? 'singleCol' : ''} ${this.state.isActiveOne ? 'active' : ''}`}
+        >
+            {this.loopListingOne()}
+        </div>
+    </div>
+</div>
+
+<div className={'trending'}>
+    <input
+        type="text"
+        name="search"
+        className="search"
+        placeholder="Search Classifieds, Jobs, Housing, Discussions, Personals..."
+    />
+    <div className={'title'}>
+        <i className="far fa-clock"></i>Trending Now
+    </div>
+    <div className={'trendingTags'}>{this.loopTags()}</div>
+</div>
+</section> */
+
+
+
+
+
+
+
+
+
+
+
+
+    // =============================CENTER COLUMN===============================
+    // loopListingOne = () => {
+    //     let category = this.props.categoriesData;
+    //     console.log(category[0].title);
+
+    //     return category[0].listings.map((listing, i) => {
+    //         console.log(listing);
+    //         return(
+    //             <Link to ={`/for-sale`}  key = {i}>
+    //                 {listing.name}
+    //             </Link>
+    //         );
+    //     });
+    // }
+    
+	// loopTags = () => {
+	// 	let testTags = [1, 2, 3, 4, 5, 6, 7];
+
+	// 	return testTags.map(item => {
+	// 		return (
+	// 			<div key={item} className={'tag'}>
+	// 				Apple Macbook
+	// 			</div>
+	// 		);
+	// 	});
+    // }
+    
+    // =============================MEDIA QUERY DROPDOWN===============================
+    // changeBoolOne = () => {
+    //     let isActiveOne = this.state.isActiveOne;
+    //     console.log(isActiveOne);
+
+    //     if(isActiveOne === false){
+    //         this.setState({
+    //             isActiveOne: !isActiveOne
+    //         });
+    //     }else {
+    //         this.setState({
+    //             isActiveOne: !isActiveOne
+    //         })
+    //     }
+    // }
+    // =============================MEDIA QUERY DROPDOWN===============================
+
+
+    // =============================CENTER COLUMN===============================

@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
- @import "reset";
- @import "home.css";
- @import "header.css";
- @import "listings.css";
- @import "itemDetails.css";
+@import "reset";
+@import "home.css";
+@import "header.css";
+@import "listings.css";
+@import "itemDetails.css";
 
 
  * {

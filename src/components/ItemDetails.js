@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Gallery from './Gallery.js';
+import Gallery from './detailsComponents/Gallery.js';
 
 export default class Details extends Component {
 	constructor() {
