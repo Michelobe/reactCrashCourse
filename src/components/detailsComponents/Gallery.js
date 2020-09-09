@@ -93,7 +93,8 @@ export default class Gallery extends Component {
 							style={{
 								background: `url('${
 									this.state.allImages[this.state.currentIndex]
-								}') center center no-repeat`
+                                }') center center no-repeat`,
+                                backgroundSize: `contain`
 							}}
 						></div>
 					</div>

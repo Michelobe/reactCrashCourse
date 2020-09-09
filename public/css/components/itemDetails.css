@@ -108,6 +108,7 @@
 
 .detailsPage .whiteBox .contentArea .mediaColumn .gallery .slider .mainImage {
     position: relative;
+    margin: 0 auto;
     height: 450px;
     width: 600px;
 }
@@ -133,7 +134,7 @@
 .detailsPage .whiteBox .contentArea .mediaColumn .gallery .slider .mainImage .imageOne {
     height: 100%;
     width: 100%;
-    background-size: cover;
+    background-size: contain;
 }
 .detailsPage .whiteBox .contentArea .mediaColumn .gallery .thumbnails {
     display: flex;
@@ -230,5 +231,41 @@
     .detailsPage {
         max-width: 800px;
     }
+    .detailsPage .whiteBox .contentArea .mediaColumn .gallery .slider .mainImage{
+        height: 350px;
+        width: 475px;
+    }
+    .detailsPage .whiteBox .contentArea .mediaColumn .gallery .thumbnails .thumbImage{
+        height: 75px;
+        width: 75px;
+    }
 }
 /* IPAD */
+
+
+/* LARGE PHONE */
+@media only screen and (max-width: 450px) {
+    .detailsPage {
+        max-width: 450px;
+    }
+    .detailsPage .whiteBox .contentArea{
+        flex-flow: column;
+    }
+    .detailsPage .whiteBox .contentArea .mediaColumn .gallery .slider .mainImage{
+        height: 250px;
+        width: 327px;
+    }
+    .detailsPage .whiteBox .contentArea .mediaColumn .gallery .thumbnails{
+        flex-flow: row wrap;
+    }
+    .detailsPage .whiteBox .contentArea .mediaColumn .gallery .thumbnails .thumbImage{
+        height: 75px;
+        width: 75px;
+    }
+    .detailsPage .whiteBox .contentArea .mediaColumn .description{
+        padding: 1.5rem 0;
+        margin: 0 0 1.5rem 0;
+        border-bottom: 1px solid rgba(139, 9, 255, .2);
+    }
+}
+/* LARGE PHONE */
