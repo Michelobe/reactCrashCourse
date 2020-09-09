@@ -200,8 +200,10 @@
         visibility: hidden;
     }
     .home .container #centerCol .links{
-        margin: 0 0 1rem 0;
         flex-flow: column nowrap;
+    }
+    .home .container #centerCol .links .categories{
+        margin-bottom: 1rem;
     }
     .home .container #centerCol .links .categories .title{
         margin: 0;
