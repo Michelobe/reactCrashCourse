@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Gallery from './detailsComponents/Gallery.js';
+import SubMenu from './detailsComponents/SubMenu.js';
 
 export default class Details extends Component {
 	constructor() {
@@ -13,61 +14,15 @@ export default class Details extends Component {
 				<div className={'container'}>
 					<div className={'whiteBox'}>
 						{/* =======================SUBMENU=========================== */}
-						<section className={'subMenu'}>
-							<div className={'direction'}>
-								<div className={'prev btn'}>
-									Prev
-								</div>
-								<div className={'next btn'}>
-									Next
-								</div>
-							</div>
-							<nav className={'subLinks'}>
-								<div className = {'link'}>More ads by this user</div>
-								<div className = {'link'}>Print</div>
-								<div className = {'link'}>Share</div>
-								<div className = {'link'}>Contact Seller</div>
-							</nav>
-						</section>
+                        <SubMenu />
 						{/* =======================SUBMENU=========================== */}
 
 						{/* ===============================CONTENTAREA================================== */}
 						<section className={'contentArea'}>
 							<div className={'mediaColumn'}>
+                                <h1>2008 Acura RDX Turbo AWD - $9,000</h1>
                                 <Gallery />
-							</div>
-							<div className={'detailsColumn'}>
-								<div className={'date'}>Posted: Apr 26th</div>
-								<h3 className="title">Black 2008 Acura Rdx</h3>
-								<h4 className={'price'}>$8,900</h4>
-								<div className={'moreDetails'}>
-									<div className={'info'}>
-										<label>Vin</label>
-										<h5>WBAKA8C55BC446879</h5>
-									</div>
-									<div className={'info'}>
-										<label>Mileage</label>
-										<h5>107,000</h5>
-									</div>
-									<div className={'info'}>
-										<label>Transmission</label>
-										<h5>Auto</h5>
-									</div>
-									<div className={'info'}>
-										<label>Fuel</label>
-										<h5>93 octane</h5>
-									</div>
-									<div className={'info'}>
-										<label>Drive Train</label>
-										<h5>AWD</h5>
-									</div>
-									<div className={'info'}>
-										<label>Exterior Color</label>
-										<h5>Black</h5>
-									</div>
-								</div>
 								<div className={'description'}>
-									<label>Description</label>
 									<p>
 										Low mileage and in excellent condition! This "Nighthawk
 										Black Pearl" 2007 Acura RDX SH-AWD has the Technology
@@ -88,6 +43,37 @@ export default class Details extends Component {
 										price that are this nice! Don't hesitate...this won't last
 										long!
 									</p>
+								</div>
+							</div>
+							<div className={'detailsColumn'}>
+								<div className={'moreDetails'}>
+									<div className={'info'}>
+								        <h5>Black 2008 Acura Rdx</h5>
+									</div>
+									<div className={'info'}>
+										<label>vin:</label>
+										<h5>WBAKA8C55BC446879</h5>
+									</div>
+									<div className={'info'}>
+										<label>mileage:</label>
+										<h5>107,000</h5>
+									</div>
+									<div className={'info'}>
+										<label>transmission:</label>
+										<h5>Auto</h5>
+									</div>
+									<div className={'info'}>
+										<label>fuel:</label>
+										<h5>93 octane</h5>
+									</div>
+									<div className={'info'}>
+										<label>drive train:</label>
+										<h5>AWD</h5>
+									</div>
+									<div className={'info'}>
+										<label>exterior color:</label>
+										<h5>Black</h5>
+									</div>
 								</div>
 							</div>
 						</section>

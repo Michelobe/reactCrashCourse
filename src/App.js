@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 // import Axios from 'axios';
 import Header from './includes/Header.js';
+import FooterCopyright from './includes/footerCopyright.js';
 import Home from './components/Home.js';
 import Listings from './components/Listings.js';
 import Details from './components/ItemDetails.js';
@@ -38,20 +39,19 @@ class App extends Component {
         return (
             <Router>
                 <div className="App">
+                        {/* ====================HACKY FIX, NEED TO REVISIT===================== */}
+                        {this.state.isMobile < this.state.mobile ? <Header /> : ""}
+                        {/* ====================HACKY FIX, NEED TO REVISIT===================== */}
                         <Route exact path = '/'>
-                            {/* ====================HACKY FIX, NEED TO REVISIT===================== */}
-                            {this.state.isMobile < this.state.mobile ? <Header /> : ""}
-                            {/* ====================HACKY FIX, NEED TO REVISIT===================== */}
                             <Home categoriesData = {this.state.categoriesData} />
                         </Route>
                         <Route exact path = '/:for-sale'>
-                            <Header />
                             <Listings listingsData = {this.state.listingsData} />
                         </Route>
                         <Route exact path = '/:for-sale/:item-details'>
-                            <Header />
                             <Details />
                         </Route>
+                        <FooterCopyright />
                 </div>
             </Router>
         );

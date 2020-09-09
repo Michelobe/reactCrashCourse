@@ -136,6 +136,20 @@ export default class CenterCol extends Component {
                             <div className = {'nearLink'}>lewiston</div>
                             <div className = {'nearLink'}>medford</div>
                         </div>
+                        <div className = {`nearDesktop`}>
+                            <div className = {'nearLink'}>bellingham</div>
+                            <div className = {'nearLink'}>bend</div>
+                            <div className = {'nearLink'}>boise</div>
+                            <div className = {'nearLink'}>chico</div>
+                            <div className = {'nearLink'}>corvallis</div>
+                            <div className = {'nearLink'}>east oregon</div>
+                            <div className = {'nearLink'}>eugene</div>
+                            <div className = {'nearLink'}>humboldt</div>
+                            <div className = {'nearLink'}>kalispell</div>
+                            <div className = {'nearLink'}>kalamath falls</div>
+                            <div className = {'nearLink'}>lewiston</div>
+                            <div className = {'nearLink'}>medford</div>
+                        </div>
                     </section>
                     {/* ===============RIGHT COLUMN================ */}
 

@@ -7,7 +7,7 @@
     font-size: 1.25rem;
 }
 .home .container #centerCol .centerHeader h1{
-    margin: 1rem 0;
+    margin: 0 0 1rem 0;
     padding: .5rem 0;
     color: rgb(168, 168, 168);
     background: linear-gradient(135deg, rgba(255, 255, 255, .9) 0%, rgba(175, 172, 174, 0.9) 100%);
@@ -30,8 +30,6 @@
     display: flex;
     flex-flow: column;
     background: transparent;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
     color: rgb(139, 9, 255);
 }
 .home .container #centerCol .links .categories .title {
@@ -177,3 +175,65 @@
     visibility: visible;
 }
 
+/* ===================================MEDIA QUERIES======================================= */
+
+/* IPAD PRO */
+@media only screen and (max-width: 1300px) {
+    .home .container #centerCol .links{
+        background: transparent;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    .home .container #centerCol .links .categories{
+        width: 16rem;
+    }
+}
+/* IPAD PRO */
+
+/* IPAD */
+@media only screen and (max-width: 850px) {
+    .home .container #centerCol .centerHeader{
+        position: absolute;
+        visibility: hidden;
+    }
+    .home .container #centerCol .links{
+        margin: 0 0 1rem 0;
+    }
+    .home .container #centerCol .links .categories .title{
+        margin: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+    .home .container #centerCol .links .categories .mobileCategory{
+        position: static;
+        visibility: visible;
+        margin: 0;
+    }
+    .home .container #centerCol .links .categories .groupLinks {
+        border: none;
+        position: absolute;
+        visibility: hidden;
+    }
+}
+/* IPAD */
+
+/* LARGE PHONE */
+@media only screen and (max-width: 450px) {
+    .home .container #centerCol{
+        margin: 0;
+    }
+    .home .container #centerCol .links{
+        border: none;
+    }
+    .home .container #centerCol .links .categories{
+        width: 100%;
+    }
+    .home .container #centerCol .links .categories .groupLinks.active{
+        margin-top: .5rem;
+    }
+    .home .container #centerCol .links .categories .mobileCategory{
+        border: none;
+    }
+}
+/* border-bottom: 1px solid white; */

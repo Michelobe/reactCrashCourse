@@ -234,7 +234,7 @@ export default class CenterColumn extends Component {
         if(seeMore === true || seeMore === false){
             this.setState({
                 seeMore: !seeMore
-            })
+            });
         }
     }
     // =============================TOGGLE SEEMORE CLASS===============================

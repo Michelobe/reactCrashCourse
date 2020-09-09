@@ -1,0 +1,66 @@
+@import "./homeColumns/leftColumn.css";
+@import "./homeColumns/centerColumn.css";
+@import "./homeColumns/rightColumn.css";
+
+.home .container {
+    display: grid;
+    grid-template-columns: 2fr 6fr 1fr;
+    grid-gap: 1rem;
+    margin: 1rem auto;
+}
+
+/* =======================LEFT COLUMN============================= */
+
+/* =======================CENTER COLUMN============================= */
+
+/* =======================RIGHT COLUMN============================= */
+
+
+/* ===================================MEDIA QUERIES======================================= */
+
+/* IPAD PRO */
+@media only screen and (max-width: 1300px) {
+    .home{
+        max-width: 1000px;
+        margin: 1rem auto;
+    }
+}
+/* IPAD PRO */
+
+/* IPAD */
+@media only screen and (max-width: 850px) {
+    .container header{
+        position: static;
+        visibility: visible;
+    }
+    .home{
+        max-width: 750px;
+    }
+    .home .container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* IPAD */
+
+/* LARGE PHONE */
+@media only screen and (max-width: 600px) {
+    .home{
+        max-width: 450px;
+    }
+    .home .container{
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        width: 90%;
+    }
+}
+/* LARGE PHONE */
+
+
+
+
+
+
+
+
+
+/* ===================================MEDIA QUERIES======================================= */

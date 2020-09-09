@@ -10,7 +10,8 @@ export default class Listings extends Component {
             //listingsData from componentWillMount
             minPrice: 0,
             maxPrice: 50000,
-            keyItem: ''
+            keyItem: '',
+            mobileMenuActive: false
         };
     }
     
@@ -38,15 +39,11 @@ export default class Listings extends Component {
         });
 
     }
-
     keyItem = (i) => {
         this.setState({
             keyItem: this.state.listingsData[i]
         })
     }
-
-
-
 	loopItems = () => {
 		return this.state.listingsData.map((item, i) => {
             if(item.price >= this.state.minPrice && item.price <= this.state.maxPrice){
@@ -82,12 +79,26 @@ export default class Listings extends Component {
 		});
 	};
 
+    // =============================TOGGLE SEEMORE CLASS===============================
+    mobileMenuToggle = () => {
+        let mobileMenuActive = this.state.mobileMenuActive;
+
+        if(mobileMenuActive === true || mobileMenuActive === false){
+            this.setState({
+                mobileMenuActive: !mobileMenuActive
+            }, () => {
+                console.log(this.state.mobileMenuActive);
+            });
+        }
+    }
+
 	render() {
 		return (
             <div className="container">
                 <div className={'listingsPage'}>
 					{/* ===================================FILTER OPTIONS====================================== */}
-					<section id={'filter'}>
+                    <section id={`filter`}
+                             className = {`${this.state.mobileMenuActive ? 'active' : ''}`}>
 						{/* ==============DROPDOWN PRICE==================== */}
                         <h1>{this.state.listingsData[0].listing}</h1>
 						<div className={'formGroup price'}>
@@ -133,11 +144,16 @@ export default class Listings extends Component {
 							<div className="resetBtn">Reset</div>
 						</div>
 					</section>
-                    {/* =====================================FILTER RESULTS==================================== */}
+					{/* ===================================FILTER OPTIONS====================================== */}
+
+
+                    {/* =====================================LIST VIEW==================================== */}
                     <section id={'listView'}>
                         <div className="container">
                             <div className={'whiteBox'}>
                                 <section className={'changeView'}>
+                                    <i className="fas fa-cog"
+                                        onClick = {this.mobileMenuToggle.bind(null)}></i>
                                     {/* ==============DROPDOWN VIEWDROPDOWN========== */}
                                     <div className={'formGroup viewDropdown'}>
                                         <select name={'selectView'} className={'selectView'}>
@@ -158,6 +174,7 @@ export default class Listings extends Component {
                             </div>
                         </div>
                     </section>
+                    {/* =====================================LIST VIEW==================================== */}
 				</div>
 			</div>
 		);

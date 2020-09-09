@@ -4,7 +4,6 @@
     background: linear-gradient(135deg, rgba(255, 255, 255, .9) 0%, rgba(175, 172, 174, 0.9) 100%);
     border-left: 1px solid white;
     border-right: 1px solid white;
-    margin: 1rem 0 0 0;
 }
 .home .container #leftCol h1{
     font-family: 'Libre Caslon Display', serif;
@@ -70,3 +69,23 @@
 .home .container #leftCol .aboutLinks div:hover {
     color: #8B09FF;
 }
+
+
+/* ===================================MEDIA QUERIES======================================= */
+
+/* LARGE PHONE */
+@media only screen and (max-width: 600px) {
+    .home .container #leftCol{
+        margin: 0;
+        border: none;
+    }
+    .home .container #leftCol h1{
+        position: absolute;
+        visibility: hidden;
+    }
+    .home .container #leftCol .heading{
+        position: absolute;
+        visibility: hidden;
+    }
+}
+/* LARGE PHONE */

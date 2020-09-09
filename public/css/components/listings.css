@@ -1,12 +1,6 @@
 
 
-/* ===============LEFT COLUMN FILTER AREA ========================= */
-.listingsPage {
-    background: white;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    margin: 0 auto;
-}
+/* =========================== LEFT COLUMN FILTER AREA =============================== */
 .listingsPage {
     background: white;
     display: grid;
@@ -22,6 +16,10 @@
 .listingsPage #filter h1{
     margin: 1.75rem 0;
     padding: 0 1rem;
+}
+.listingsPage #filter .minMax{
+    display: flex;
+    flex-flow: row nowrap;
 }
 .listingsPage .formGroup {
     display: flex;
@@ -46,12 +44,12 @@
 }
 .listingsPage .formGroup.button {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-around;
 }
 .listingsPage .formGroup.button .primaryBtn, .listingsPage .formGroup.button .resetBtn {
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px 10px;
     margin: 0 0.5rem;
     cursor: pointer;
     text-align: center;
@@ -79,10 +77,10 @@
     color: white;
     border: 1px solid #8B09FF;
 }
-/* ===============LEFT COLUMN FILTER AREA ========================= */
+/* =========================== LEFT COLUMN FILTER AREA =============================== */
 
 
-/* ===============RIGHT COLUMN LISTING AREA ========================= */
+/* =============================== RIGHT COLUMN LISTING AREA ========================= */
 .listingsPage #listView {
     background: #f1f1f1;
 }
@@ -97,6 +95,14 @@
     display: flex;
     flex-flow: row;
     margin-bottom: 1rem;
+    align-items: center;
+    z-index: 56;
+}
+.listingsPage #listView .whiteBox .changeView .fas{
+    padding: 1rem;
+    font-size: 1.5rem;
+    position: absolute;
+    visibility: hidden;
 }
 .listingsPage #listView .whiteBox .allItems {
     display: flex;
@@ -147,4 +153,78 @@
     color: #565d68;
     text-transform: capitalize;
 }
-/* ===============RIGHT COLUMN LISTING AREA ========================= */
+/* =============================== RIGHT COLUMN LISTING AREA ========================= */
+
+
+
+/* IPAD PRO */
+@media only screen and (max-width: 1300px) {
+    .listingsPage #listView .whiteBox .allItems{
+        grid-gap: 15px 0px;
+    }
+}
+/* IPAD PRO */
+
+/* ================= NECESSARY FOR MANUAL BROWSER RESIZING =============== */
+/* reduces item container width as browser shrinks */
+@media only screen and (max-width: 1200px) {
+    .listingsPage #listView .whiteBox .allItems .item{
+        min-width: 275px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .listingsPage #listView .whiteBox .allItems .item{
+        min-width: 250px;
+    }
+}
+/* ================= NECESSARY FOR MANUAL BROWSER RESIZING =============== */
+
+/* IPAD */
+@media only screen and (max-width: 850px) {
+    .listingsPage #filter .minMax{
+        display: flex;
+        flex-flow: column;
+    }
+    .listingsPage #listView .whiteBox .allItems{
+        grid-gap: 15px 15px;
+    }
+    .listingsPage #listView .whiteBox .allItems .item{
+        min-width: 275px;
+    }
+    .listingsPage .formGroup.button .primaryBtn, .listingsPage .formGroup.button .resetBtn {
+        margin: 0 0 0 .25rem;
+    }
+}
+/* IPAD */
+
+/* LARGE PHONE */
+@media only screen and (max-width: 600px) {
+    .listingsPage{
+        display: flex;
+        justify-content: center;
+    }
+    .listingsPage #filter{
+        position: absolute;
+        top: 6rem;
+        left: -20rem;
+        opacity: 0;
+        background: white;
+        padding: 0 3.5rem 2rem 3.5rem;
+        z-index: 1;
+        transition: .5s ease-in;
+        width: 20rem;
+    }
+    .listingsPage #filter.active{
+        top: 6rem;
+        left: 1rem;
+        opacity: 1;
+    }
+    .listingsPage #filter h1{
+        margin: .5rem 0;
+        color: black;
+    }
+    .listingsPage #listView .whiteBox .changeView .fas{
+        position: static;
+        visibility: visible;
+    }
+}
