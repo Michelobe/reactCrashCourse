@@ -37,7 +37,7 @@ export default class Details extends Component {
 										Privacy Glass & more! The odometer is 23k miles below market
 									</p>
 									<p>
-										ass & more! The odometer is 23k miles below market average!
+										The odometer is 23k miles below market average!
 										We serviced & detailed this one, too: new front door
 										speakers, new wipers & more! You won't find many at this
 										price that are this nice! Don't hesitate...this won't last
