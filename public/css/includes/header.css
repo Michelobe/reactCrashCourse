@@ -2,4 +2,24 @@
 .container header{
     display: flex;
     flex-flow: row;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.616);
+}
+.container header a{
+    text-decoration: none;
+}
+.container header a h1{
+    font-size: 2rem;
+}
+.container header #headerSearch{
+    position: relative;
+    height: 100%;
+    -webkit-box-shadow: 1px 1px 27px -3px rgba(0,0,0,0.23); 
+box-shadow: 1px 1px 27px -3px rgba(0,0,0,0.23);
+}
+.container header #headerSearch .fas{
+    position: absolute;
+    right: 0;
+    padding: .25rem;
 }
