@@ -19,21 +19,11 @@ export default class Header extends Component {
                     <Link to ={`/`} className = {'homeLink'}>
                         <h1>CityShop</h1>
                     </Link>
-					<div className={'leftMenu'}>
-						<div className={'cityDropdown'}>
-                            Portland
-							<i className={`fas fa-chevron-down`}></i>
-						</div>
-					</div>
-					<div className={'rightMenu'}>
-						<div className={'userImg'}>
-							<i className="fas fa-user"></i>
-						</div>
-						<div className={'userDropdown'}>
-							My Account<i className={'fas fa-chevron-down'}></i>
-						</div>
-						{/* <div className={'postBtn'}>Post to Indexed</div> */}
-					</div>
+					<form id="headerSearch">
+						<input type="search" placeholder="Search" />
+						<i className="fas fa-search"></i>
+					</form>
+					<button type="submit">Post An Ad</button>
 				</header>
 			</div>
 		);

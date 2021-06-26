@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
 @import "reset.css";
 @import "includes/header.css";
-@import "includes/footerCopyright.css";
+/* @import "includes/footerCopyright.css"; */
 @import "components/home.css";
 @import "components/listings.css";
 @import "components/itemDetails.css";
@@ -12,22 +12,11 @@
 	 box-sizing: border-box;
 }
  html, body {
-	 font-family: 'Roboto', sans-serif;
-	 background: linear-gradient(135deg, rgba(255, 255, 255, .95) 0%, rgba(175, 172, 174, 0.95) 100%), url('https://upload.wikimedia.org/wikipedia/commons/c/c1/Portland%2C_Oregon_skyline_from_the_Ross_Island_Bridge.jpg') center top no-repeat;
-	 background-size: cover;
 	 min-height: 100vh;
      min-width: 300px;
      margin: 0;
 }
 .container {
-    max-width: 1300px;
+    max-width: 1100px;
     margin: 0 auto;
 }
-
-/* LARGE PHONE */
-@media only screen and (max-width: 450px) {
-    .container{
-        max-width: 400px;
-    }
-}
-/* LARGE PHONE */

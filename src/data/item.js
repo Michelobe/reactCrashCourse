@@ -17,12 +17,12 @@ module.exports = [
         },
         description: "Low mileage and in excellent condition! This 'Nighthawk Black Pearl' 2007 Acura RDX SH-AWD has the Technology Package! All-Wheel-Drive and very safe! It comes with the Automatic Transmission, Turbocharged 2.3-Liter DOHC i-VTEC Engine, Alloy Wheels, Backup Camera, Climate Control, Heated Leather Seats, GPS Navigation System, Tow Hitch, Power Equipment Group, Cruise Control, Power Sunroof, Acura/ELS Surround Premium AM/FM/XM Sound System, Keyless Entry, Privacy Glass & more! The odometer is 23k miles below market! The odometer is 23k miles below market average! We serviced & detailed this one, too: new front door speakers, new wipers & more! You won't find many at this price that are this nice! Don't hesitate...this won't last long!",
         images: [
-            'https://images.craigslist.org/00M0M_aFmrTzaBfTO_0cU09G_600x450.jpg',
-            'https://images.craigslist.org/00303_4A2jLuBQgEK_0cU09G_600x450.jpg',
-            'https://images.craigslist.org/00s0s_cKbtqL6rjAZ_0cU09G_600x450.jpg',
-            'https://images.craigslist.org/00D0D_3qmifq1bp6T_0cU09G_600x450.jpg',
-            'https://images.craigslist.org/00808_hQE2MHGsUt2_0cU09G_600x450.jpg',
-            'https://images.craigslist.org/00404_vWieaLwnkR_0cU09G_600x450.jpg'
+            'https://images.hgmsites.net/lrg/2021-jeep-cherokee-limited-fwd-angular-front-exterior-view_100764526_l.jpg',
+            'https://images.hgmsites.net/lrg/2021-jeep-cherokee-latitude-plus-4x4-angular-rear-exterior-view_100765869_l.jpg',
+            'https://images.hgmsites.net/lrg/2021-jeep-cherokee-latitude-plus-4x4-angular-rear-exterior-view_100765869_l.jpg',
+            'https://images.hgmsites.net/lrg/2021-jeep-cherokee-latitude-plus-4x4-rear-exterior-view_100765876_l.jpg',
+            'https://images.hgmsites.net/lrg/2021-jeep-cherokee-limited-fwd-trunk_100764527_l.jpg',
+            'https://images.hgmsites.net/lrg/2021-jeep-cherokee-trailhawk-4x4-dashboard_100764475_l.jpg'
         ]
     },
     {

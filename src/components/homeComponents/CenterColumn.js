@@ -227,27 +227,12 @@ export default class CenterColumn extends Component {
     }
     // =============================MEDIA QUERY DROPDOWN===============================
 
-    // =============================TOGGLE SEEMORE CLASS===============================
-    seeMoreToggle = () => {
-        let seeMore = this.state.seeMore;
-
-        if(seeMore === true || seeMore === false){
-            this.setState({
-                seeMore: !seeMore
-            });
-        }
-    }
-    // =============================TOGGLE SEEMORE CLASS===============================
-
 	render() {
         let categories = this.state.categoriesData;
 
 
 		return (
             <section id = "centerCol">
-                <div className = {'centerHeader'}>
-                    <h1>Portland, OR</h1>
-                </div>
                 <div className={'links'}>
                     <div className={'categories'}>
                         <Link to ={`/for-sale`}
@@ -360,42 +345,6 @@ export default class CenterColumn extends Component {
                         >
                             {this.loopListingSeven()}
                         </div>
-                    </div>
-                    {/* ==================NOTHING IN RESUME CATEGORY======================= */}
-                    <div className={'categories'}>
-                        <Link to ={`/for-sale`}
-                            className={'title'}
-                        >
-                            {categories[7].title}
-                        </Link>
-                        <div className = {'mobileCategory'}>
-                            {categories[7].title}
-                        </div>
-                        <div
-                        className={`groupLinks ${categories[7].title === 'jobs' || categories[7].title === 'housing' ? 'singleCol' : ''}`}
-                        >
-                            {this.loopListingEight()}
-                        </div>
-                    </div>
-                    {/* ==================NOTHING IN RESUME CATEGORY======================= */}
-                </div>
-
-                <div className={'trending'}>
-                    <input
-                        type="text"
-                        name="search"
-                        className="search"
-                        placeholder="Search Classifieds, Jobs, Housing, Discussions, Personals..."
-                    />
-                    <div className={'title'}>
-                        <i className="far fa-clock"></i>Trending Now
-                    </div>
-                    {/* =====================================TRENDING LOOP==================================== */}
-                    <div className={`trendingTags ${this.state.seeMore ? 'active' : ''}`}>{this.loopTags()}</div>
-                    <div className = {`seeMoreLess`} onClick = {this.seeMoreToggle}>
-                        <div className = {`btn seeMore ${this.state.seeMore ? 'active' : ''}`}>See More</div>
-                        <div className = {`btn seeLess ${this.state.seeMore ? 'active' : ''}`}>See Less</div>
-                    {/* =====================================TRENDING LOOP==================================== */}
                     </div>
                 </div>
             </section>

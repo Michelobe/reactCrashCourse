@@ -1,0 +1,16 @@
+.footerLinks{
+    padding: 1rem 0;
+    background: rgb(163, 163, 163);
+    .footerLink{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        text-decoration: none;
+        h6{
+            margin: 0 0 0 .5rem;
+        }
+        i{
+            margin: 0 0 0 .5rem;
+        }
+    }
+}

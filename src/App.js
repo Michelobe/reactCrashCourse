@@ -39,18 +39,14 @@ class App extends Component {
         return (
             <Router>
                 <div className="App">
+                        <Header />
                         <Route exact path = '/'>
-                            {/* ====================HACKY FIX, NEED TO REVISIT===================== */}
-                            {this.state.isMobile < this.state.mobile ? <Header /> : ""}
-                            {/* ====================HACKY FIX, NEED TO REVISIT===================== */}
                             <Home categoriesData = {this.state.categoriesData} />
                         </Route>
                         <Route exact path = '/:for-sale'>
-                            <Header />
                             <Listings listingsData = {this.state.listingsData} />
                         </Route>
                         <Route exact path = '/:for-sale/:item-details'>
-                            <Header />
                             <Details />
                         </Route>
                         <FooterCopyright />
