@@ -6,6 +6,7 @@
 @import "components/home.css";
 @import "components/listings.css";
 @import "components/itemDetails.css";
+@import "components/centerColumn.css";
 
 
  * {

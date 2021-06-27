@@ -1,0 +1,25 @@
+
+.home .container .mainPage .links{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+.home .container .mainPage .links a{
+    text-decoration: none;
+    color: rgb(40, 54, 93);
+    text-transform: capitalize;
+}
+.home .container .mainPage .links .categories{
+    padding: 1rem;
+    -webkit-box-shadow: 1px 1px 27px -3px rgba(0,0,0,0.23); 
+    box-shadow: 1px 1px 27px -3px rgba(0,0,0,0.23);
+}
+.home .container .mainPage .links .categories a.title{
+    padding-bottom: 3rem;
+}
+.home .container .mainPage .links .categories .groupLinks{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}

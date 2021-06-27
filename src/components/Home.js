@@ -6,8 +6,7 @@ export default class CenterCol extends Component {
 	constructor() {
 		super();
 		this.state = {
-            //categoriesData set by componentWillMount,
-            nearbyBool: false
+            //categoriesData set by componentWillMount
 		};
     }
 
@@ -19,20 +18,10 @@ export default class CenterCol extends Component {
         });
     }
 
-    toggleNearby = () => {
-        let nearbyBool = this.state.nearbyBool;
-
-        if(nearbyBool === true || nearbyBool === false){
-            this.setState({
-                nearbyBool: !nearbyBool
-            })
-        }
-    }
-
 	render() {
 		return (
-			<div className={'home'}>
-				<div className="container">
+			<div className={`home`}>
+				<div className={`container`}>
                     <CenterColumn categoriesData = {this.props.categoriesData} />
 				</div>
 			</div>
