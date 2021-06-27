@@ -1,25 +1,92 @@
 
-.container header{
+/* =============== TOP HEADER ================ */
+.topHead{
+    width: 100vw;
+    background: rgb(40, 54, 93);
+}
+.topHead .container{
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    color: white;
+    padding: .5rem 0;
+    font-size: .8rem;
+}
+.topHead .container .langLocContainer{
+    display: flex;
+    flex-flow: row;
+}
+.topHead .container .langLocContainer .languageSelect{
+    display: flex;
+    flex-flow: row;
+    margin-right: 1rem;
+}
+.topHead .container .langLocContainer .languageSelect h6{
+    margin-right: .5rem;
+}
+.topHead .container .langLocContainer .languageSelect h5{
+    margin-right: .5rem;
+}
+.topHead .container .langLocContainer .locationSelect{
+    display: flex;
+    flex-flow: row;
+}
+.topHead .container .langLocContainer .locationSelect h6{
+    margin-right: .5rem;
+}
+.topHead .container .langLocContainer .locationSelect h5{
+    margin-right: .5rem;
+}
+.topHead .container .accountSelect{
+    display: flex;
+    flex-flow: row;
+}
+.topHead .container .accountSelect h6{
+    margin-right: .5rem;
+}
+.topHead .container .accountSelect i{
+    margin-right: .5rem;
+}
+/* =============== BOTTOM HEADER ================ */
+.container .bottomHead{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 0;
-    border-bottom: 1px solid rgba(200, 200, 200, 0.616);
+    border-bottom: 1px solid rgba(200, 200, 200, 0.123);
 }
-.container header a{
+.container .bottomHead .homeLink{
     text-decoration: none;
+    color: rgb(21, 210, 204);
 }
-.container header a h1{
+.container .bottomHead .homeLink .logo{
     font-size: 2rem;
 }
-.container header #headerSearch{
+.container .bottomHead .homeLink .logo .logoLetter{
+    font-size: 3rem;
+    color: rgb(40, 54, 93);
+}
+.container .bottomHead #headerSearch{
     position: relative;
     height: 100%;
+    width: 20rem;
     -webkit-box-shadow: 1px 1px 27px -3px rgba(0,0,0,0.23); 
-box-shadow: 1px 1px 27px -3px rgba(0,0,0,0.23);
+    box-shadow: 1px 1px 27px -3px rgba(0,0,0,0.23);
 }
-.container header #headerSearch .fas{
+.container .bottomHead #headerSearch input{
+    border: none;
+    padding: .25rem 1rem;
+}
+.container .bottomHead #headerSearch .fas{
     position: absolute;
     right: 0;
     padding: .25rem;
+}
+.container .bottomHead .postBtn{
+    background: rgb(21, 210, 204);
+    color: white;
+    border: none;
+    padding: .5rem 2rem;
+    font-size: 1rem;
 }
