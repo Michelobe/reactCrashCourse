@@ -10,6 +10,7 @@ export default class CenterColumn extends Component {
 		this.state = {
             //categoriesData set by componentWillMount
 		};
+        this.loopDate = this.loopDate.bind(this);
     }
     
     UNSAFE_componentWillMount() {
@@ -109,6 +110,23 @@ export default class CenterColumn extends Component {
     }
     // =============================LOOP LISTING FUNCTIONS===============================
     
+    
+    // =============================LOOP DATE FUNCTION===============================
+    loopDate = () => {
+        let date=[];
+
+        for(let i=1; i < 29; i++){
+            date.push(i);
+        }
+        
+        return date.map((i) => {
+            return(
+                <div className={`date`} key={i}>{i}</div>
+            );
+        });
+    }
+    // =============================LOOP DATE FUNCTION===============================
+    
 
 	render() {
         let categories = this.state.categoriesData;
@@ -117,11 +135,21 @@ export default class CenterColumn extends Component {
 		return (
             <section className={`mainPage`}>
                 <div className={'links'}>
+                    <div className={`calendar`}>
+                        <div className={`day`}>SUN</div>
+                        <div className={`day`}>MON</div>
+                        <div className={`day`}>TUE</div>
+                        <div className={`day`}>WED</div>
+                        <div className={`day`}>THU</div>
+                        <div className={`day`}>FRI</div>
+                        <div className={`day`}>SAT</div>
+                        {this.loopDate()}
+                    </div>
                     <div className={'categories'}>
                         <Link to ={`/for-sale`}
                             className={'title'}
                         >
-                            {categories[0].title}
+                            <i className="fas fa-users"></i>{categories[0].title}
                         </Link>
                         <div
                         className={`groupLinks ${categories[0].title === 'jobs' || categories[0].title === 'housing' ? 'singleCol' : ''} ${this.state.isActiveOne ? 'active' : ''}`}
@@ -133,7 +161,7 @@ export default class CenterColumn extends Component {
                         <Link to ={`/for-sale`}
                             className={'title'}
                         >
-                            {categories[1].title}
+                            <i className="fas fa-home"></i>{categories[1].title}
                         </Link>
                         <div
                         className={`groupLinks ${categories[1].title === 'jobs' || categories[1].title === 'housing' ? 'singleCol' : ''} ${this.state.isActiveTwo ? 'active' : ''}`}
@@ -145,7 +173,7 @@ export default class CenterColumn extends Component {
                         <Link to ={`/for-sale`}
                             className={'title'}
                         >
-                            {categories[2].title}
+                            <i className="fas fa-briefcase"></i>{categories[2].title}
                         </Link>
                         <div
                         className={`groupLinks ${categories[2].title === 'jobs' || categories[2].title === 'housing' ? 'singleCol' : ''} ${this.state.isActiveThree ? 'active' : ''}`}
@@ -157,7 +185,7 @@ export default class CenterColumn extends Component {
                         <Link to ={`/for-sale`}
                             className={'title'}
                         >
-                            {categories[3].title}
+                            <i className="far fa-gem"></i>{categories[3].title}
                         </Link>
                         <div
                         className={`groupLinks ${categories[3].title === 'jobs' || categories[3].title === 'housing' ? 'singleCol' : ''} ${this.state.isActiveFour ? 'active' : ''}`}
@@ -169,7 +197,7 @@ export default class CenterColumn extends Component {
                         <Link to ={`/for-sale`}
                             className={'title'}
                         >
-                            {categories[4].title}
+                            <i className="fas fa-comment-dollar"></i>{categories[4].title}
                         </Link>
                         <div
                         className={`groupLinks ${categories[4].title === 'jobs' || categories[4].title === 'housing' ? 'singleCol' : ''} ${this.state.isActiveFive ? 'active' : ''}`}
@@ -181,7 +209,7 @@ export default class CenterColumn extends Component {
                         <Link to ={`/for-sale`}
                             className={'title'}
                         >
-                            {categories[5].title}
+                            <i className="fas fa-comment-dots"></i>{categories[5].title}
                         </Link>
                         <div
                         className={`groupLinks ${categories[5].title === 'jobs' || categories[5].title === 'housing' ? 'singleCol' : ''} ${this.state.isActiveSix ? 'active' : ''}`}
@@ -193,7 +221,7 @@ export default class CenterColumn extends Component {
                         <Link to ={`/for-sale`}
                             className={'title'}
                         >
-                            {categories[6].title}
+                            <i className="fas fa-laptop-code"></i>{categories[6].title}
                         </Link>
                         <div
                         className={`groupLinks ${categories[6].title === 'jobs' || categories[6].title === 'housing' ? 'singleCol' : ''} ${this.state.isActiveSeven ? 'active' : ''}`}

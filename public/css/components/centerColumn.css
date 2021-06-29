@@ -3,23 +3,40 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.home .container .mainPage .links .calendar{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 1.5rem;
+    box-shadow: 1px -1px 113px -71px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px -1px 113px -71px rgba(0,0,0,0.75);
 }
 .home .container .mainPage .links a{
     text-decoration: none;
     color: rgb(40, 54, 93);
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 .home .container .mainPage .links .categories{
-    padding: 1rem;
-    -webkit-box-shadow: 1px 1px 27px -3px rgba(0,0,0,0.23); 
-    box-shadow: 1px 1px 27px -3px rgba(0,0,0,0.23);
+    padding: 1.5rem;
+    box-shadow: 1px -1px 113px -71px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px -1px 113px -71px rgba(0,0,0,0.75);
 }
-.home .container .mainPage .links .categories a.title{
-    padding-bottom: 3rem;
+.home .container .mainPage .links .categories .title i{
+    color: rgb(21, 210, 204);
+    padding-right: .5rem;
 }
 .home .container .mainPage .links .categories .groupLinks{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
+    margin-top: 1rem;
+}
+.home .container .mainPage .links .categories .groupLinks a{
+    text-transform: capitalize;
 }
